@@ -15,6 +15,12 @@
 	width: auto;
 }
 
+/* ==== 底部修改 ==== */
+
+div.more_product {
+	min-width: auto;
+}
+
 /* ==== 版面修改 ==== */
 
 .tags-off {
