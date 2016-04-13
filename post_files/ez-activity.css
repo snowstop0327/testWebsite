@@ -1,0 +1,953 @@
+/*
+vj_2-20140320
+vj_3-20140410
+*/
+.ez-activity {
+  background: #efefef;
+  color: #333333;
+}
+.ez-activity .main-box {
+  float: left;
+  width: 780px;
+}
+.ez-activity .side-box {
+  float: left;
+  margin-left: 20px;
+  width: 390px;
+}
+
+.activity-btn,
+.activity-btn:link,
+.activity-btn:visited {
+  display: inline-block;
+  text-align: center;
+  margin: 30px auto;
+  width: 200px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 8px;
+  background: #ff6706;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+.activity-btn:hover {
+  background: #ff761f;
+  box-shadow: inset 0 -3px #d85b0b;
+  text-decoration: none;
+}
+.activity-btn:active {
+  background: #ff761f;
+  box-shadow: inset 0 3px #d85b0b;
+  text-decoration: none;
+}
+
+.main-box .info-wrap {
+  background: white;
+  padding: 0 60px 40px 60px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px #eeeeee;
+}
+.main-box .info-wrap .banner {
+  width: 780px;
+  margin-left: -60px;
+}
+.main-box .info-wrap .banner img {
+  width: 100%;
+}
+.main-box .info-wrap .title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4em;
+  padding: 40px 0 20px;
+  display: block;
+}
+
+.main-box .info-wrap .activity-info .activity-btn-area {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.main-box .info-wrap .activity-info .activity-btn-area .activity-btn {
+  display: inline-block;
+  margin: 0 10px;
+}
+.main-box .info-wrap .activity-info .activity-btn-area .completed,
+.main-box .info-wrap .activity-info .activity-btn-area .completed:hover,
+.main-box .info-wrap .activity-info .activity-btn-area .completed:active {
+  background: #999999;
+  box-shadow: none;
+  cursor: inherit;
+}
+.main-box .info-wrap .activity-info .count-down,
+.main-box .info-wrap .activity-info .count-join,
+.main-box .info-wrap .activity-info .time,
+.main-box .info-wrap .activity-info .host {
+  color: #999999;
+}
+.main-box .info-wrap .activity-info .count-down .count,
+.main-box .info-wrap .activity-info .count-join .count,
+.main-box .info-wrap .activity-info .time .count,
+.main-box .info-wrap .activity-info .host .count {
+  color: #ff6706;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px;
+}
+.main-box .info-wrap .activity-info .count-join {
+  padding-left: 25px;
+}
+.main-box .info-wrap .activity-info .time {
+  display: block;
+  margin-top: 6px;
+}
+.main-box .info-wrap .activity-info .time em {
+  padding: 5px;
+  font-style: normal;
+}
+.main-box .info-wrap .activity-info .host {
+  display: block;
+  margin-top: -11px;
+}
+.main-box .info-wrap .activity-info .host img {
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+.main-box .info-wrap .activity-info .share-box {
+  margin-top: 12px;
+}
+.main-box .info-wrap .activity-dsc {
+  display: block;
+  line-height: 2em;
+  margin-top: 30px;
+}
+.main-box .activity-wrap {
+  position: relative;
+  background: white;
+  padding-bottom: 40px;
+  box-shadow: 0 5px 10px #eeeeee;
+  margin-bottom: 20px;
+}
+.main-box .activity-wrap .activity-position {
+  position: absolute;
+  top: -20px;
+}
+.main-box .activity-wrap .title {
+  display: block;
+  text-align: center;
+  line-height: 1em;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 35px 0 25px;
+  margin: 0 60px;
+  border-bottom: 1px dashed #bbbbbb;
+}
+.main-box .activity-wrap .step {
+  font-size: 0;
+  text-align: center;
+  margin: 20px 0 0;
+  position: relative;
+}
+.main-box .activity-wrap .step .step-circle {
+  display: inline-block;
+}
+.main-box .activity-wrap .step .step-circle span {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  margin-right: 20px;
+  background: #bbbbbb;
+}
+.main-box .activity-wrap .step .step-circle:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background: #bbbbbb;
+  top: 19px;
+  margin-left: -20px;
+}
+.main-box .activity-wrap .step .step-finish {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  background: #bbbbbb;
+}
+.main-box .activity-wrap .step .step-this span {
+  background: #ff6706;
+}
+.main-box .activity-wrap .step .step-complete span {
+  background: #ff6706;
+}
+.main-box .activity-wrap .step .step-complete:after {
+  background: #ff6706;
+}
+.main-box .activity-wrap .step .all-complete {
+  background: #ff6706;
+}
+.main-box .activity-wrap .content {
+  margin: 0 60px;
+}
+.main-box .activity-wrap .content .dsc,
+.main-box .activity-wrap .content .complete-dsc,
+.main-box .activity-wrap .content .winner-dsc {
+  display: block;
+  margin: 20px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.5em;
+}
+.main-box .activity-wrap .content .dsc {
+  margin-bottom: 0;
+}
+.main-box .activity-wrap .content .supplement {
+  display: block;
+  margin: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.3em;
+  min-height: 1px;
+  color: #999999;
+}
+.main-box .activity-wrap .content .attend-btn-area {
+  padding: 20px 0 50px;
+  text-align: center;
+}
+.main-box .activity-wrap .content .attend-btn-area .activity-btn {
+  display: inline-block;
+  margin: 0 10px;
+}
+.main-box .activity-wrap .content .attend-btn-area .completed,
+.main-box .activity-wrap .content .attend-btn-area .completed:hover,
+.main-box .activity-wrap .content .attend-btn-area .completed:active {
+  background: #999999;
+  box-shadow: none;
+  cursor: inherit;
+}
+.main-box .activity-wrap .content .sort-select {
+  margin: 25px 0 10px;
+  border-bottom: 1px solid #cccccc;
+}
+.main-box .activity-wrap .content .sort-select .sort-item {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1em;
+  margin-right: 1px;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: #666666;
+  text-decoration: none;
+}
+.main-box .activity-wrap .content .sort-select .sort-item:hover {
+  background: #f6f6f6;
+}
+.main-box .activity-wrap .content .sort-select .sort-this {
+  background: #eeeeee;
+  cursor: initial;
+}
+.main-box .activity-wrap .content .sort-select .sort-this:hover {
+  background: #eeeeee;
+}
+.main-box .activity-wrap .content .winner-words {
+  padding-top: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+.main-box .activity-wrap .content .winner-words p {
+  margin-bottom: 20px;
+}
+.main-box .activity-wrap .content .winner-words p em {
+  color: #ff6706;
+  font-style: normal;
+  margin: 0 5px;
+}
+.main-box .activity-wrap .content .winner-words p a {
+  color: #5372b4;
+  margin: 0 5px;
+}
+.main-box .activity-wrap .content .winner-words p a:hover {
+  text-decoration: underline;
+}
+.main-box .activity-wrap .content ul.winner-list {
+  font-size: 0;
+  color: #333333;
+}
+.main-box .activity-wrap .content ul.winner-list li {
+  display: inline-block;
+  width: 32%;
+  height: 46px;
+  margin-right: 2%;
+  margin-bottom: 12px;
+  vertical-align: top;
+  outline: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 1.4em;
+}
+.main-box .activity-wrap .content ul.winner-list li:nth-child(3n) {
+  margin-right: 0;
+}
+.main-box .activity-wrap .content ul.winner-list li .id-info {
+  position: relative;
+  padding: 8px;
+  padding-left: 46px;
+}
+.main-box .activity-wrap .content ul.winner-list li img.id-photo {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 36px;
+  height: 36px;
+}
+.main-box .activity-wrap .content ul.winner-list li .id-num {
+  line-height: 1em;
+  color: #ff7606;
+}
+.main-box .activity-wrap .content ul.winner-list li .id-name {
+  display: block;
+  color: #666666;
+  margin-top: 1px;
+}
+.main-box .activity-wrap .content ul.participant {
+  font-size: 0;
+  color: #333333;
+}
+.main-box .activity-wrap .content ul.participant li {
+  display: inline-block;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 12px;
+  vertical-align: top;
+  outline: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 1.4em;
+}
+.main-box .activity-wrap .content ul.participant li:hover {
+  outline: 1px solid #aaaaaa;
+}
+.main-box .activity-wrap .content ul.participant li .id-content {
+  border-bottom: 1px solid #dddddd;
+}
+.main-box .activity-wrap .content ul.participant li:nth-child(3n) {
+  margin-right: 0;
+}
+.main-box .activity-wrap .content ul.participant li .img-area {
+  position: relative;
+  display: block;
+  padding: 3px;
+  height: 160px;
+  overflow: hidden;
+  cursor: -webkit-zoom-in;
+  margin-bottom: 5px;
+}
+.main-box .activity-wrap .content ul.participant li .img-area:hover img.id-img {
+  opacity: 0.8;
+}
+.main-box .activity-wrap .content ul.participant li img.id-img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.main-box .activity-wrap .content ul.participant li .id-msg {
+  display: block;
+  padding: 0 5px;
+  margin-top: 2px;
+}
+.main-box .activity-wrap .content ul.participant li .attend-time {
+  display: block;
+  color: #bbbbbb;
+  padding-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+.main-box .activity-wrap .content ul.participant li .vote-num {
+  display: inline-block;
+  margin: 0px 5px 6px;
+}
+.main-box .activity-wrap .content ul.participant li .vote-num:before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 2px;
+  margin-top: 1px;
+  background: url(../img/activity-icons.png) -49px 1px;
+}
+.main-box .activity-wrap .content ul.participant li .id-info {
+  position: relative;
+  padding: 8px;
+  padding-left: 46px;
+}
+.main-box .activity-wrap .content ul.participant li img.id-photo {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 36px;
+  height: 36px;
+}
+.main-box .activity-wrap .content ul.participant li .id-num,
+.main-box .activity-wrap .content ul.participant li .attend-time {
+  line-height: 1em;
+}
+.main-box .activity-wrap .content ul.participant li .id-num {
+  color: #ff7606;
+}
+.main-box .activity-wrap .content ul.participant li .id-name {
+  display: block;
+  color: #666666;
+  margin-top: 1px;
+}
+.main-box .activity-wrap .content .page_area {
+  font-size: 0;
+  margin-top: 30px;
+}
+.main-box .activity-wrap .content .page_area a {
+  font-size: 13px;
+}
+.main-box .activity-wrap .activity-box ul.activity-process li {
+  display: block;
+}
+.main-box .activity-wrap .activity-box ul.activity-process .upload .activity-btn {
+  display: block;
+}
+.main-box .activity-wrap .activity-box .upld-pic,
+.main-box .activity-wrap .activity-box .upld-msg,
+.main-box .activity-wrap .activity-box .id-result,
+.main-box .activity-wrap .activity-box .upld-result {
+  background: #eeeeee;
+  margin: 2px 20px;
+  padding: 20px;
+}
+.main-box .activity-wrap .activity-box .upld-pic .dsc,
+.main-box .activity-wrap .activity-box .upld-msg .dsc,
+.main-box .activity-wrap .activity-box .id-result .dsc,
+.main-box .activity-wrap .activity-box .upld-result .dsc {
+  margin: 10px 0;
+}
+.main-box .activity-wrap .activity-box .upld-pic .supplement,
+.main-box .activity-wrap .activity-box .upld-msg .supplement,
+.main-box .activity-wrap .activity-box .id-result .supplement,
+.main-box .activity-wrap .activity-box .upld-result .supplement {
+  margin: 0 0 30px;
+}
+.main-box .activity-wrap .activity-box .uc .dsc,
+.main-box .activity-wrap .activity-box .uc .supplement,
+.main-box .activity-wrap .activity-box .uc .um-text {
+  text-align: left;
+}
+.main-box .activity-wrap .activity-box .uc .um-text {
+  background: #eeeeee;
+  padding: 20px;
+}
+.main-box .activity-wrap .activity-box .uc .um-text .um-dsc {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.main-box .activity-wrap .activity-box .upld-pic {
+  text-align: center;
+}
+.main-box .activity-wrap .activity-box .upld-pic .btn-area {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main-box .activity-wrap .activity-box .upld-pic .btn-area:hover .activity-btn {
+  background: #ff761f;
+  box-shadow: inset 0 -3px #d85b0b;
+}
+.main-box .activity-wrap .activity-box .upld-pic .btn-area:active .activity-btn {
+  background: #ff761f;
+  box-shadow: inset 0 3px #d85b0b;
+}
+.main-box .activity-wrap .activity-box .upld-pic .btn-area .re {
+  margin-top: 30px;
+}
+.main-box .activity-wrap .activity-box .upld-pic .activity-btn {
+  margin: 0 auto;
+}
+.main-box .activity-wrap .activity-box .upld-pic .max-w {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1em;
+  color: #888888;
+}
+.main-box .activity-wrap .activity-box .upld-pic .up_input {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 1000px !important;
+  height: 300px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+}
+.main-box .activity-wrap .activity-box .upld-msg .um-helper {
+  display: block;
+  color: #888888;
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 22px;
+}
+/*
+.main-box .activity-wrap .activity-box .upld-msg .um-helper:before {
+  content: "通關密語：";
+}
+*/
+.main-box .activity-wrap .activity-box .upld-msg .um-dsc {
+  font-size: 22px;
+  font-weight: 600;
+}
+.main-box .activity-wrap .activity-box .upld-msg .um-dsc_Privacy {
+  font-size: 15px;
+  padding-top: 15px;
+  line-height: 20px;
+}
+.main-box .activity-wrap .activity-box .upld-msg .um-input {
+  display: block;
+  margin-top: 10px;
+  width: 96%;
+  padding: 8px 2%;
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #333333;
+  border: 1px solid #c7c7c7;
+}
+.main-box .activity-wrap .activity-box .upld-msg .um-input_Privacy {
+  font-size: 13px;
+  line-height: 1em;
+}
+.main-box .activity-wrap .activity-box .upld-msg .um-input:focus {
+  box-shadow: 0 0 1px 1px #ff6706;
+}
+.main-box .activity-wrap .activity-box .id-result {
+  position: relative;
+  padding-left: 90px;
+  min-height: 50px;
+}
+.main-box .activity-wrap .activity-box .id-result img.mbr-photo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+}
+.main-box .activity-wrap .activity-box .id-result p {
+  line-height: 1.7em;
+}
+.main-box .activity-wrap .activity-box .id-result p em {
+  color: #ff6706;
+  font-style: normal;
+}
+.main-box .activity-wrap .activity-box .id-result .completed-time {
+  color: #888888;
+  font-size: 12px;
+}
+.main-box .activity-wrap .activity-box .id-result .mbr-name {
+  margin-right: 5px;
+}
+.main-box .activity-wrap .activity-box .id-result .time {
+  margin: 0 5px;
+}
+.main-box .activity-wrap .activity-box .upld-result {
+  text-align: center;
+  background: transparent;
+  padding-bottom: 0;
+}
+.main-box .activity-wrap .activity-box img.up-img {
+  display: inline-block;
+  padding: 3px;
+  background: white;
+  outline: 1px solid #c7c7c7;
+  max-width: 100%;
+  max-height: 400px;
+}
+.main-box .activity-wrap .activity-box .um-text {
+  display: block;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-top: 15px;
+}
+.main-box .activity-wrap .attended-result {
+  display: block;
+  margin-top: 60px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px dashed #bbbbbb;
+  text-align: center;
+  line-height: 1em;
+  font-size: 28px;
+  font-weight: 600;
+}
+.main-box .activity-wrap .rtelative-sup {
+  background: #f6f6f6;
+}
+.main-box .activity-wrap .rtelative-sup .sup-title {
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+.main-box .activity-wrap .result-btn {
+  display: block;
+  margin: 15px auto 0;
+}
+
+.side-box .more-wrap {
+  position: relative;
+  background: white;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px #eeeeee;
+}
+.side-box .more-wrap .title {
+  display: block;
+  background: #dddddd;
+  padding-left: 15px;
+  line-height: 38px;
+  font-weight: 600;
+  color: #666666;
+}
+.side-box .more-wrap .hide-btn,
+.side-box .more-wrap .show-btn {
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.side-box .more-wrap .hide-btn:hover,
+.side-box .more-wrap .show-btn:hover {
+  border: 1px solid #c3c3c3;
+  background-color: #e1e1e1;
+}
+.side-box .more-wrap .hide-btn {
+  background-image: url(../img/activity-icons.png);
+}
+.side-box .more-wrap .show-btn {
+  background-image: url(../img/activity-icons.png);
+  background-position: -20px 0;
+}
+.side-box .more-wrap .content {
+  padding: 20px 15px;
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #888888;
+}
+.side-box .more-wrap .content img.award-pic {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.side-box .more-wrap .content .safety-promise {
+  display: block;
+  width: 100%;
+  height: 90px;
+  margin-bottom: 15px;
+  background: url(../img/activity/activity-safety.jpg);
+}
+.side-box .more-wrap .content ul {
+  padding-left: 27px;
+}
+.side-box .more-wrap .content ul li {
+  list-style: decimal;
+  padding: 3px 0;
+}
+.side-box .more-wrap .award {
+  text-align: center;
+}
+.side-box .more-wrap .award .award-item {
+  display: block;
+  font-size: 15px;
+}
+.award-info {
+  margin-top: 15px;
+  font-size: 0;
+}
+.award-info .award-info-btn {
+  position: relative;
+  display: inline-block;
+  background-color: #656c7d;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  padding: 9px 11px;
+  text-decoration: none;
+}
+.award-info .award-info-btn:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.award-info .award-info-btn:hover {
+  top: -1px;
+  background-color: #6F7688;
+  box-shadow: 0 2px 2px rgba(0,0,0,.25);
+}
+.award-info .award-info-btn:active {
+  top: 0px;
+}
+.award-info .award-info-btn .liao-jie {
+  display: block;
+  float: left;
+  height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  padding-right: 11px;
+  margin-right: 9px;
+  border-right: 1px solid #ccc;
+  color: #ccc;
+  white-space: normal;
+}
+.award-info .award-info-btn .award-info-name {
+  display: block;
+  float: left;
+  max-width: 250px;
+  line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.side-box .award-info .award-info-btn .liao-jie {
+  height: 28px;
+  width: 2em;
+}
+.side-box .award-info .award-info-btn .award-info-name {
+  line-height: 28px;
+}
+.side-box .award-info .award-info-btn {
+  padding: 7px 11px;
+}
+.side-box .award-info {
+  margin-top: 12px;
+}
+.side-box .more-wrap .more-evt-link {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 15px;
+  text-align: right;
+  font-size: 13px;
+  line-height: 38px;
+}
+.more-evt ul {
+  padding: 0 15px;
+}
+.more-evt ul li {
+  border-bottom: 1px dashed #ccc;
+  padding: 15px 0;
+}
+.more-evt ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+.more-evt .evt-info img.banner {
+  width: 100%;
+}
+.more-evt .evt-info img.banner:hover {
+  opacity: .8;
+}
+.more-evt .evt-info .evt-name {
+  margin: 7px 0 10px;
+}
+.more-evt .evt-info .evt-name a {
+  line-height: 18px;
+  font-size: 13px;
+  color: #666;
+}
+.more-evt .evt-info .evt-name a:hover,
+.more-evt .evt-info .evt-name a:active {
+  color: #0f66c0;
+}
+.more-evt .evt-info .datainfo {
+  font-size: 13px;
+  color: #999;
+}
+.more-evt .evt-info .datainfo:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.more-evt .evt-info .datainfo em {
+  font-style: normal;
+  font-weight: bolder;
+  color: #333;
+  padding: 2px;
+}
+.more-evt .evt-info .datainfo .cd {
+  float: left;
+  line-height: 16px;
+}
+.more-evt .evt-info .datainfo .cd:before {
+  content: '';
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  background: url(http://ezprice.com.tw/jonStyle/img/EZ-icons.png) scroll -202px 0 no-repeat;
+  margin-right: 4px;
+}
+.more-evt .evt-info .datainfo .pp {
+  float: right;
+  line-height: 16px;
+}
+.more-evt .evt-info .datainfo .info {
+  display: block;
+  float: left;
+}
+.more-evt .evt-info .datainfo .cd:after,
+.more-evt .evt-info .datainfo .pp:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* light-box */
+body.lightbox-open {
+  overflow: hidden;
+}
+.light-box .close-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(235, 235, 235, 0.75);
+  cursor: -webkit-zoom-out;
+}
+.activity-lightbox {
+  position: relative;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 860px;
+  background: white;
+  box-shadow: 0 5px 10px #dddddd;
+  color: #333333;
+  cursor: initial;
+}
+.activity-lightbox .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../img/activity-icons.png) 5px -145px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.activity-lightbox .close-btn:hover {
+  opacity: 1;
+}
+.activity-lightbox .ct {
+  padding: 60px;
+  text-align: center;
+}
+.activity-lightbox img.act-pic {
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+}
+.activity-lightbox .act-msg {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.5em;
+  padding-bottom: 20px;
+}
+.activity-lightbox .vote-box {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #eeeeee;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 0;
+}
+.activity-lightbox .vote-box .vote-num {
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.activity-lightbox .vote-box .vote-num:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 22px;
+  height: 22px;
+  margin-right: 3px;
+  margin-top: 3px;
+  background: url(../img/activity-icons.png) -77px 1px;
+}
+.activity-lightbox .vote-box .vote-btn {
+  display: inline-block;
+  vertical-align: middle;
+  background: #ff6706;
+  color: white;
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.activity-lightbox .vote-box .vote-btn:hover {
+  background: #ff761f;
+  box-shadow: inset 0 -2px #d85b0b;
+}
+.activity-lightbox .vote-box .vote-btn:active {
+  background: #ff761f;
+  box-shadow: inset 0 2px #d85b0b;
+}
+.activity-lightbox .lb-info {
+  padding-top: 20px;
+  border-top: 1px solid #cccccc;
+}
+.activity-lightbox .info-box {
+  display: inline-block;
+  padding-left: 60px;
+  position: relative;
+  text-align: left;
+  height: 50px;
+}
+.activity-lightbox .info-box .id-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.activity-lightbox .info-box p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.activity-lightbox .info-box .id-num {
+  margin-right: 5px;
+  color: #ff6706;
+}
+.activity-lightbox .info-box p.time-p {
+  color: #999999;
+}
+.activity-lightbox .info-box .time {
+  margin: 0 8px;
+}
+.evt_fd{
+  text-align: center;
+}
