@@ -167,6 +167,55 @@ ul.tags_box li {
 	color: red;
 }
 
+.css-table .titletd {
+	display: none;
+}
+
+@media only screen and (max-width: 480px) {
+	.css-table{
+		background-color: transparent;
+	}
+	.css-table .thead{
+		display: none;
+	}
+	.css-table .tr,
+	.css-table .tr2{
+		display:block;
+		border: #ddd 1px solid;
+		margin-bottom: 5px;
+		background: #ffffff;
+	}
+	.css-table .th,
+	.css-table .td{
+		display:inline-block;
+		width: 51.7%;
+		border: none;
+		border-bottom: 1px solid #eee;
+		text-align: left;
+	}
+	.css-table .titletd {
+		display:inline-block;
+		width: 33%;
+		padding: 10px;
+		border-bottom: 1px solid #eee;
+		font-weight: bold;
+	}
+
+	.css-table .th:last-child, 
+	.css-table .td:last-child,
+	.css-table .titletd:last-child{
+    border-right: none;
+    border-bottom: none;
+}
+}
+
+// @media only screen and (max-width: 720px) {
+// 	.css-table .th,
+// 	.css-table .td{
+// 		display:block;
+// 		width: 100%;
+// 	}
+// }
 /* ==== 版面修改內頁 ==== */
 
 .main-box .info-wrap .banner {
