@@ -4,7 +4,7 @@
 /* ==== 頭部修改 ==== */
 
 #headbox {
-	min-width: auto;
+	min-width: initial;
 }
 
 .search_text {
@@ -14,11 +14,18 @@
 .hot_more_list {
 	width: auto;
 }
+@media (max-width: 768px) {
+	.head_menu .hot_list .tag-area,
+	.head_menu .hot_list .kws-area {
+		display: none;
+	}
+}
+
 
 /* ==== 底部修改 ==== */
 
 div.more_product {
-	min-width: auto;
+	min-width: initial;
 }
 
 /* ==== 版面修改 ==== */

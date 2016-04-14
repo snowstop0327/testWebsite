@@ -662,7 +662,7 @@ a:link, a:visited {
   z-index: 1000;
 }
 @media (max-width: 768px) {
-  .HD_Logo {
+  .head_logo {
     display: none;
   }
 }
@@ -1031,6 +1031,8 @@ a:link, a:visited {
   float: right;
   height: 64px;
   min-width: 122px;
+  z-index: 1000;
+  background: #2d3340;
 }
 .user_menu_btn {
   display: block;
@@ -1038,7 +1040,7 @@ a:link, a:visited {
   cursor: pointer;
 }
 .user_menu_btn:hover {
-  background: #2d3340;
+  background: #272C38;
 }
 .user_menu_btn.is-open {
   background: #2d3340;
@@ -1879,7 +1881,7 @@ a:link, a:visited {
   }
   .PageArea .PageLast, .PageArea .PageNext {
     padding: 3px 16px;
-    min-width: auto;
+    min-width: initial;
   }
 }
 
