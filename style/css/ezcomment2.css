@@ -318,7 +318,7 @@ html, body {
 }
 
 #content_box {
-  min-width: auto;
+  min-width: initial;
 }
 
 @media (max-width: 1024px) {
