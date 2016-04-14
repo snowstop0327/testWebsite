@@ -176,8 +176,36 @@ ul.tags_box li {
 }
 
 .main-box .info-wrap .banner img {
-	height: 400px;
-	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .main-box .info-wrap .banner img {
+    width: auto;
+    height: 400px;
+  }
+}
+
+.main-box .info-wrap {
+	padding: 10px 30px 40px 30px;
+}
+
+.main-box .info-wrap .activity-dsc {
+	color: #999;
+    margin-top: 5px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.main-box .info-wrap .activity-dsc .tagBox {
+	float: left;
+}
+
+.main-box .info-wrap .activity-dsc .fbPluginBox {
+	float: right;
+	margin: 7px 0px;
+	max-width: 100%;
 }
 
 ul li .evt-info {
