@@ -23,6 +23,10 @@ div.more_product {
 
 /* ==== 版面修改 ==== */
 
+.more-less {
+	margin: 10px;
+}
+
 .tags-off {
 	font-size: 14px;
 	color: #4d4d4d !important;
@@ -42,10 +46,10 @@ div.more_product {
 	word-wrap:break-word;
 }
 
-ul.model {
+.page_content_L_column .pgevt_contlistbox ul.model {
 	float: right;
 	margin: 10px 0;
-	padding-right: 15px;
+	padding-left: 0px;
 }
 
  .model li.pandt, .model li.pic {
@@ -87,14 +91,43 @@ ul.tags_box li {
 	height: auto;
 }
 
+@media (max-width: 525px) {
+	.page_content_L_column .pgevt_titlebox .pgevt_menubox {
+		border: none;
+	}
+	.page_content_L_column .pgevt_menubox li {
+		width: 50% !important;
+		// border-right: none !important;
+		border-bottom: 1px solid #d1d3d4;
+	}
+	.page_content_L_column .pgevt_menubox li a {
+		position: relative;
+		padding: 0px !important;
+		left:calc(50% - 32px);
+	}
+	.page_content_L_column .pgevt_menubox li:nth-child(odd){
+		width: 49%!important;
+		border-right: 1px solid #d1d3d4 !important;
+		border-left: 1px solid #d1d3d4;
+	}
+	.page_content_L_column .pgevt_menubox li:nth-child(-n+2){
+		border-top: 2px solid #626262;
+	}
+	.page_content_L_column .pgevt_titlebox .pgevt_title {
+		background-position:center left; 
+	}
+	
+}
+
 .pgevt_contlistbox .describebox {
 	font-size: 20px;
-	margin: 10px;
+	margin: 0px 5px;
+	max-width: 100%;
 }
 
 .pgevt_contlistbox .post-botton {
 	float: right;
-	display: inline-block;
+	display: block;
 	text-align: center;
 	line-height: 30px;
 	border-radius: 8px;
@@ -103,9 +136,22 @@ ul.tags_box li {
 	color: white;
 	cursor: pointer;
 	padding: 2px 25px;
+	/* margin-bottom: 10px; */
+	margin-top: -5px;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
-.pgevt_contlistbox h1 {padding-bottom: 10px;}
+.pgevt_contlistbox .post-botton:hover {
+	text-decoration: none;
+	opacity: .8;
+	box-shadow: 0 4px 0 #A5470B;
+	margin-top: -10px;
+}
+.pgevt_contlistbox h1 {padding-bottom: 10px;display: block;float: left;}
 
 /* ==== table ==== */
 
