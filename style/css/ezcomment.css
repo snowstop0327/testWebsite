@@ -14,9 +14,8 @@
 .hot_more_list {
 	width: auto;
 }
-@media (max-width: 768px) {
-	.head_menu .hot_list .tag-area,
-	.head_menu .hot_list .kws-area {
+@media (max-width: 850px) {
+	.head_menu .hot_list {
 		display: none;
 	}
 }

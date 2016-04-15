@@ -351,6 +351,9 @@ html, body {
     display: table;
     clear: both;
   }
+  .head_menu_2 {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .jScr .fixwight {
@@ -597,8 +600,13 @@ a:link, a:visited {
   background-color: white;
   z-index: 999;
 }
+
+#headbox:before {
+  background-color: #393f4e;
+}
+
 @media (max-width: 768px) {
-  .#headbox {
+  #headbox {
     height: 64px;
     position: fixed;
     top: 0;
@@ -1067,6 +1075,7 @@ a:link, a:visited {
   padding: 18px 8px 19px 8px;
   height: 27px;
   position: relative;
+  background: #2d3340;
 }
 .user_info .profilepic {
   float: left;
@@ -3677,7 +3686,7 @@ h3 img {
     width: 100%;
   }
   .tail_list{
-    width: 100%;
+    width: 98%;
     border-bottom: 1px dashed #ccc;
     border-left: none;
     height: auto;
@@ -3894,3 +3903,4 @@ h3 img {
     display: inline-block;
   }
 }
+
