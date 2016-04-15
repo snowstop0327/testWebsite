@@ -358,6 +358,10 @@ ul li .evt-info .evt-textbox {
     float: left;
     margin-right: 4.08163%;
   }
+
+  .main-box .activity-wrap .content {
+  	margin: 0 20px;
+  }
 }
 
 .ez-activity .side-box {
