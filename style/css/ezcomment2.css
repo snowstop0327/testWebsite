@@ -195,7 +195,7 @@
 
 body {
   -webkit-text-size-adjust: none;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, button, textarea, p, blockquote, th, td {
@@ -3686,7 +3686,7 @@ h3 img {
     width: 100%;
   }
   .tail_list{
-    width: 98%;
+    width: 90%;
     border-bottom: 1px dashed #ccc;
     border-left: none;
     height: auto;

@@ -511,4 +511,36 @@ ul li .evt-info .evt-textbox {
 	padding: 0px 10px 10px 0px;
 }
 
+/* ===== TABLE NEW ==== */
+
+.product-table {
+	width: 99.9%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+.prodoct-table th{
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: #1a1a1a 1px solid;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+	.product-table, 
+	.product-table thead, 
+	.product-table tbody, 
+	.product-table th, 
+	.product-table td, 
+	.product-table tr {
+    	display: block;
+	}
+
+	.product-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+}
+
 
