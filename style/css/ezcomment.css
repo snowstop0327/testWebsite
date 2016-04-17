@@ -30,7 +30,8 @@ div.more_product {
 /* ==== 版面修改 ==== */
 
 .more-less {
-	margin: 10px;
+	margin: 8px;
+	margin-bottom: 0px;
 }
 
 .tags-off {
@@ -56,6 +57,7 @@ div.more_product {
 	float: right;
 	margin: 10px 0;
 	padding-left: 0px;
+	display: flex;
 }
 
  .model li.pandt, .model li.pic {
@@ -132,7 +134,7 @@ ul.tags_box li {
 }
 
 .pgevt_contlistbox .post-botton {
-	float: right;
+	float: left;
 	display: block;
 	text-align: center;
 	line-height: 30px;
@@ -141,9 +143,9 @@ ul.tags_box li {
 	font-size: 14px;
 	color: white;
 	cursor: pointer;
-	padding: 2px 25px;
-	/* margin-bottom: 10px; */
-	margin-top: -5px;
+	padding: 3px 25px;
+	margin-right: 5px;
+	margin-top: 3px;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -155,10 +157,15 @@ ul.tags_box li {
 	text-decoration: none;
 	opacity: .8;
 	box-shadow: 0 4px 0 #A5470B;
-	margin-top: -10px;
+	margin-top: -1px;
 }
 .pgevt_contlistbox h1 {padding-bottom: 10px;display: block;float: left;}
 
+@media (max-width: 768px) {
+	.page_contentbox {
+		padding-top: 10px;
+	}
+}
 /* ==== table ==== */
 
 .css-table{
