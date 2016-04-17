@@ -345,6 +345,14 @@ ul li .evt-info .evt-textbox {
 	display: inline;
 }
 
+.participant a.user-photo div {
+
+}
+
+.participant a.user-photo div:hover {
+	opacity: 0.8;
+}
+
 @media (max-width: 1024px) {
   .ez-activity .main-box {
     width: 66%;
