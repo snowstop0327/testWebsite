@@ -165,7 +165,7 @@ ul.tags_box li {
 	display: table;
 	display: none;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 .css-table .thead{
 	display:table-header-group;

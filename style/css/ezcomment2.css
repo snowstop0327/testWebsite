@@ -1,4 +1,4 @@
-.img-sprite, .img-PageLast, .PageArea a.PageLast:before, .img-PageLast_disabled, .img-PageNext, .img-PageNext_disabled, .img-facebook, .HD_Social_item.facebook, .img-googleplus, .HD_Social_item.google, .img-link_fb, .img-link_in, .img-link_mail, .img-myComment, .img-myInfo, .HD_MemberTool_item#myInfo:before, .img-myLogout, .HD_MemberTool_item#myLogout:before, .img-myPromotion, .HD_MemberTool_item#myPromotion:before, .img-myRss, .img-mySearch, .HD_MemberTool_item#mySearch:before, .img-myWantList, .HD_MemberTool_item#myWantList:before, .img-search, .HD_Search_btn, .img-search_btn, .img-share_arr, .img-share_arr02, .img-share_fb, .img-share_google, .img-userPhoto {
+.img-sprite, .img-PageLast, .page_area a.PageLast:before, .img-PageLast_disabled, .img-PageNext, .img-PageNext_disabled, .img-facebook, .HD_Social_item.facebook, .img-googleplus, .HD_Social_item.google, .img-link_fb, .img-link_in, .img-link_mail, .img-myComment, .img-myInfo, .HD_MemberTool_item#myInfo:before, .img-myLogout, .HD_MemberTool_item#myLogout:before, .img-myPromotion, .HD_MemberTool_item#myPromotion:before, .img-myRss, .img-mySearch, .HD_MemberTool_item#mySearch:before, .img-myWantList, .HD_MemberTool_item#myWantList:before, .img-search, .HD_Search_btn, .img-search_btn, .img-share_arr, .img-share_arr02, .img-share_fb, .img-share_google, .img-userPhoto {
   background: url('../images/img-s47f52086ff.png') no-repeat;
 }
 .fa-padding-right{
@@ -1816,12 +1816,12 @@ a:link, a:visited {
   padding: 9px 20px 10px;
 }
 
-.PageArea {
+.page_area {
   text-align: center;
   font-size: 0;
-  padding: 40px;
+  padding: 30px;
 }
-.PageArea a {
+.page_area a {
   display: inline-block;
   font-size: 13px;
   min-width: 32px;
@@ -1832,66 +1832,92 @@ a:link, a:visited {
   margin-left: -1px;
   text-decoration: none;
 }
-.PageArea a:hover {
+.page_area a:hover {
   background: white;
   color: #ff6706;
   text-decoration: underline;
 }
-.PageArea a._current {
+.page_area a._current {
   position: relative;
   border-color: #393f4e;
   background-color: white;
   color: #ff6706;
 }
-.PageArea a.PageLast, .PageArea a.PageNext {
+.page_area a.PageLast, .page_area a.PageNext {
   min-width: 68px;
 }
-.PageArea a.PageLast:hover{
+.page_area a.PageLast:hover{
   text-decoration: underline;
   color: #ff6706;
 }
-.PageArea a.PageNext:hover{
+.page_area a.PageNext:hover{
   text-decoration: underline;
   color: #ff6706;
 }
-.PageArea a.PageLast._disabled, .PageArea a.PageNext._disabled {
+.page_area a.PageLast._disabled, .page_area a.PageNext._disabled {
   color: #aaaaaa;
   background-color: whitesmoke;
 }
-.PageArea a.PageLast._disabled:hover, .PageArea a.PageNext._disabled:hover{
+.page_area a.PageLast._disabled:hover, .page_area a.PageNext._disabled:hover{
   color: #aaaaaa;
   background-color: whitesmoke;
   text-decoration: none;
 }
 
-.PageArea .ellipsis {
+.page_area .ellipsis {
   font-size: 13px;
   color: #656c7d;
   padding: 0 10px 0 8px;
 }
-.PageArea._dark a {
+.page_area._dark a {
   background-color: white;
 }
-.PageArea._dark a:hover {
+.page_area._dark a:hover {
   border-color: #7f8492;
   position: relative;
 }
-.PageArea._dark a._current {
+.page_area._dark a._current {
   border-color: #46709b;
   z-index: 1;
 }
-.PageArea._dark a._disabled {
+.page_area._dark a._disabled {
   border-color: #aaaaaa;
 }
 
+.page_area .nth-num {
+  display: none;
+}
+
 @media screen and (max-width: 512px) {
-  .PageArea .num {
+  .page_area {
+    padding: 10px;
+  }
+
+  .page_area .num {
     display: none;
   }
-  .PageArea .PageLast, .PageArea .PageNext {
+  .page_area .PageLast, .page_area .PageNext {
     padding: 3px 16px;
     min-width: initial;
   }
+  .page_area a.last_disabled {
+    padding: 3px 16px;
+    height: auto;
+  }
+  .page_area a.next_btn {
+    padding: 3px 16px;
+    height: auto;
+  }
+  .page_area .nth-num {
+    display: inline-block;
+    padding: 3px 16px;
+    height: auto;
+    background: #f6f6f6;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    color: #333333;
+    font-size: 14px;
+}
 }
 
 .ArticleContent {
