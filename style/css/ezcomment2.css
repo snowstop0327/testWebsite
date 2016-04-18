@@ -1892,6 +1892,7 @@ a:link, a:visited {
 @media screen and (max-width: 512px) {
   .page_area {
     padding: 15px;
+    width: 100%;
   }
 
   .page_area .num {
@@ -1903,21 +1904,22 @@ a:link, a:visited {
   }
   .page_area a.last_disabled {
     padding: 3px 16px;
-    height: auto;
+    /* height: auto; */
   }
   .page_area a.next_btn {
     padding: 3px 16px;
-    height: auto;
+    /* height: auto; */
   }
   .page_area .nth-num {
     display: inline-block;
     padding: 3px 16px;
-    height: auto;
+    /* height: auto; */
     background: #f6f6f6;
     border-top: 1px solid #aaaaaa;
     border-bottom: 1px solid #aaaaaa;
     color: #333333;
     font-size: 14px;
+    height: 32px;
 }
 }
 
