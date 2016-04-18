@@ -61,7 +61,8 @@ div.more_product {
 	float: right;
 	margin: 10px 0;
 	padding-left: 0px;
-	display: flex;
+	display: flex; 
+	display: -webkit-flex; 
 }
 
  .model li.pandt, .model li.pic {
@@ -382,7 +383,7 @@ ul.tags_box li {
 }
 
 ul li .evt-info {
-	display: flex;
+	display: flex; display: -webkit-flex; 
 }
 
 .more-evt .evt-info img.banner {
