@@ -266,6 +266,10 @@ ul.tags_box li {
 	display: none;
 }
 
+.css-table .user a span {
+	display: none;
+}
+
 @media only screen and (max-width: 480px) {
 	.css-table{
 		background-color: transparent;
@@ -344,6 +348,9 @@ ul.tags_box li {
 		margin: 3px;
 		margin-right: 5px;
 		border-radius: 50%;
+	}
+	.css-table .user a span {
+		display: inherit;
 	}
 		
 }
