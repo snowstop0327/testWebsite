@@ -1893,6 +1893,7 @@ a:link, a:visited {
   .page_area {
     padding: 0px;
     width: 100%;
+    margin-bottom: 10px;
   }
 
   .page_area .num {

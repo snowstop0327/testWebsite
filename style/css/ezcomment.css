@@ -269,6 +269,7 @@ ul.tags_box li {
 @media only screen and (max-width: 480px) {
 	.css-table{
 		background-color: transparent;
+		margin-bottom: 30px;
 	}
 	.css-table .thead{
 		display: none;
