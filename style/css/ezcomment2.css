@@ -1891,7 +1891,7 @@ a:link, a:visited {
 
 @media screen and (max-width: 512px) {
   .page_area {
-    padding: 15px;
+    padding: 0px;
     width: 100%;
   }
 
@@ -1903,11 +1903,11 @@ a:link, a:visited {
     min-width: initial;
   }
   .page_area a.last_disabled {
-    padding: 3px 16px;
+    padding: 3px 5px;
     /* height: auto; */
   }
   .page_area a.next_btn {
-    padding: 3px 16px;
+    padding: 3px 5px;
     /* height: auto; */
   }
   .page_area .nth-num {

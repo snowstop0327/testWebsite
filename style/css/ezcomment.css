@@ -571,7 +571,8 @@ ul li .evt-info .evt-textbox {
 	}
  	.page_content_L_column .pgevt_contlistbox ul {
 		padding-left: 0px;
- 	}
+		margin-bottom: 25px;
+		}
  	.page_content_L_column .pgevtlist .pgevttop .pgevtad {
  		height: 14rem;
  	}
