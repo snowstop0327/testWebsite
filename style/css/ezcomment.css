@@ -97,7 +97,8 @@ ul.tags_box li {
 }
 
 .page_content_L_column .pgevt_titlebox .pgevt_title {
-	height: auto;
+	height: 43px;
+	background-image: url(../img/baby_title_tag.png);
 }
 
 .page_content_L_column .pgevt_titlebox .pgevt_menubox {
@@ -149,6 +150,9 @@ ul.tags_box li {
 	}
 	.page_content_L_column .pgevt_titlebox .mb_menubox li:first-child {
 		border-left: 1px solid #ccc;
+	}
+	.page_content_L_column .pgevt_titlebox {
+		padding-bottom: 5px;
 	}
 }
 
