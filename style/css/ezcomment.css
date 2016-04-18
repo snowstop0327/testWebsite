@@ -79,8 +79,8 @@ ul.tags_box li {
 }
 
 .page_content_L_column .pgevt_menubox li.pgevtstate_on a {
-	width: auto;
-	height: auto;
+	width: initial;
+	/* height: auto; */
 	padding: 0 30px;
 }
 
@@ -103,32 +103,46 @@ ul.tags_box li {
 	height: auto;
 }
 
-@media (max-width: 525px) {
-	.page_content_L_column .pgevt_titlebox .pgevt_menubox {
-		border: none;
-	}
-	.page_content_L_column .pgevt_menubox li {
-		width: 50% !important;
-		// border-right: none !important;
-		border-bottom: 1px solid #d1d3d4;
-	}
-	.page_content_L_column .pgevt_menubox li a {
-		position: relative;
-		padding: 0px !important;
-		left:calc(50% - 32px);
-	}
-	.page_content_L_column .pgevt_menubox li:nth-child(odd){
-		width: 49%!important;
-		border-right: 1px solid #d1d3d4 !important;
-		border-left: 1px solid #d1d3d4;
-	}
-	.page_content_L_column .pgevt_menubox li:nth-child(-n+2){
-		border-top: 2px solid #626262;
-	}
+.page_content_L_column .pgevt_titlebox .mb_menubox {
+	display: none;
+}
+
+
+@media (max-width: 480px) {
 	.page_content_L_column .pgevt_titlebox .pgevt_title {
-		background-position:center left; 
+	    background-position: center left;
 	}
-	
+	.page_content_L_column .pgevt_titlebox .pgevt_menubox {
+		display: none;
+	}
+
+	.page_content_L_column .pgevt_titlebox .mb_menubox {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.page_content_L_column .pgevt_titlebox .mb_menubox li {
+		width: 32%;
+		float: left;
+		background: #eee;
+		text-align: center;
+		border-top: 2px solid #626262;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		vertical-align: middle;
+		padding: 5px 0px;
+	}
+
+	.page_content_L_column .pgevt_titlebox .mb_menubox li a {
+		display: block;
+		width: 100%;
+	}
+	.page_content_L_column .pgevt_titlebox .mb_menubox li.pgevtstate_on {
+		background: #7A808D;
+	}
+	.page_content_L_column .pgevt_titlebox .mb_menubox li:first-child {
+		border-left: 1px solid #ccc;
+	}
 }
 
 .pgevt_contlistbox .describebox {
@@ -253,9 +267,9 @@ ul.tags_box li {
 		background: #ffffff;
 		position: relative;
 		border-bottom: #ddd 1px solid;
-		padding: 6px 0px 5px;
+		padding: 6px 0px 5px 5px;
 	}
-	.css-table .tr2 {
+	.css-table .tr {
 		background: #eee;
 	}
 	.css-table .th,
@@ -306,6 +320,15 @@ ul.tags_box li {
 	}
 	.css-table .response, .css-table .popularity {
 		color: #666666;
+	}
+	.css-table .title span.list-item {
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		background: #0f66c0;
+		margin: 3px;
+		margin-right: 5px;
+		border-radius: 50%;
 	}
 		
 }
