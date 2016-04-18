@@ -27,6 +27,10 @@ div.more_product {
 	min-width: initial;
 }
 
+.more_product .fixwight {
+	display: none;
+} 
+
 /* ==== 版面修改 ==== */
 
 .more-less {
@@ -182,7 +186,7 @@ ul.tags_box li {
 }
 .css-table .tr,.css-table .tr2{
 	display:table-row;
-	border-bottom: #333333;
+	/* border-bottom: #ddd 1px solid; */
 }
 .css-table .th,
 .css-table .td{
@@ -230,6 +234,10 @@ ul.tags_box li {
 	display: none;
 }
 
+.css-table .td img {
+	display: none;
+}
+
 @media only screen and (max-width: 480px) {
 	.css-table{
 		background-color: transparent;
@@ -239,18 +247,25 @@ ul.tags_box li {
 	}
 	.css-table .tr,
 	.css-table .tr2{
-		display:block;
-		border: #ddd 1px solid;
-		margin-bottom: 20px;
+		display: block;
+		/* border: #ddd 1px solid; */
+		/* margin-bottom: 10px; */
 		background: #ffffff;
+		position: relative;
+		border-bottom: #ddd 1px solid;
+		padding: 6px 0px 5px;
+	}
+	.css-table .tr2 {
+		background: #eee;
 	}
 	.css-table .th,
 	.css-table .td{
-		display:inline-block;
-		width: 51.7%;
+		display: inline-block;
+		/* width: 51.7%; */
 		border: none;
-		border-bottom: 1px solid #eee;
+		/* border-bottom: 1px solid #eee; */
 		text-align: left;
+		padding: 0px 3px;
 	}
 	.css-table .titletd {
 		display:inline-block;
@@ -259,13 +274,40 @@ ul.tags_box li {
 		border-bottom: 1px solid #eee;
 		font-weight: bold;
 	}
-
 	.css-table .th:last-child, 
 	.css-table .td:last-child,
 	.css-table .titletd:last-child{
-    border-right: none;
-    border-bottom: none;
-}
+    	border-right: none;
+    	border-bottom: none;
+	}
+	.css-table .title {
+		font-size: 16px;
+		/* position: absolute; */
+		display: block;
+		/* top: 0; */
+		/* left: 0; */
+		/* float: left; */
+		margin-top: 3px;
+	}
+	.css-table .tags {
+		/* position: absolute; */
+		left: 0;
+		bottom: 0;
+		display: inline;
+		line-height: 13px;
+	}
+	.css-table .user {/* margin-left: 30%; */}
+	.css-table .date {
+		/* margin-left: 5px; */
+	}
+	.css-table .td img {
+		display: inherit;
+		margin-right: 5px;
+	}
+	.css-table .response, .css-table .popularity {
+		color: #666666;
+	}
+		
 }
 
 // @media only screen and (max-width: 720px) {
@@ -555,7 +597,4 @@ ul li .evt-info .evt-textbox {
     position: absolute;
     top: -9999px;
     left: -9999px;
-}
-}
-
-
+ft: -9999px;
