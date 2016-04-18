@@ -154,6 +154,9 @@ ul.tags_box li {
 	.page_content_L_column .pgevt_titlebox {
 		padding-bottom: 5px;
 	}
+	.page_area a.current {
+		padding: 3px 5px;
+	}
 }
 
 .pgevt_contlistbox .describebox {
