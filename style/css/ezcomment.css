@@ -227,9 +227,9 @@ ul.tags_box li {
 	}
 	#menu {
 		display: none; /* hide by default */
-	  	left: 0;
-	  	position: absolute;
-	  	top: 80px;
+		/* left: 0; */
+		/* position: absolute; */
+		/* top: 80px; */
 	}
 
 

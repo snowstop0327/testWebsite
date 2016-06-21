@@ -468,8 +468,11 @@
                                     新手媽咪討論區
                                 </div>
                                 <div class="pgevt_menubox">
-                                    <ul>
-                                        <li class="pgevtstate_on">
+                                    <a href="#" id="menu-trigger">過敏防蟎大作戰
+                                        <i class="fa fa-chevron-down arrow"></i>
+                                    </a>
+                                    <ul id="menu">
+                                        <li class="pgevtstate_off">
                                             <a href="http://evt.ezprice.com.tw/ezcomment.php?ty=new">最新分享</a>
                                         </li>
                                         <li class="pgevtstate_off">
@@ -481,30 +484,9 @@
                                         <li class="pgevtstate_off">
                                             <a href="http://evt.ezprice.com.tw/ezcomment.php">問題討論</a>
                                         </li>
-                                        <li class="pgevtstate_off">
+                                        <li class="pgevtstate_on">
                                             <a href="http://evt.ezprice.com.tw/ezcomment_sp.php">過敏防蟎大作戰</a>
                                         </li>
-                                        <div class="clear"></div>
-                                    </ul>
-                                </div>
-                                <div class="mb_menubox">
-                                    <ul>
-                                        <li class="pgevtstate_on">
-                                            <a href="http://evt.ezprice.com.tw/ezcomment.php?ty=new">
-                          最新
-                        </a></li>
-                                        <li class="pgevtstate_off">
-                                            <a href="http://evt.ezprice.com.tw/ezcomment.php?ty=hot">
-                            熱門
-                          </a></li>
-                                        <li class="pgevtstate_off">
-                                            <a href="http://evt.ezprice.com.tw/ezcomment.php">
-                              商品
-                            </a></li>
-                                        <li class="pgevtstate_off">
-                                            <a href="http://evt.ezprice.com.tw/ezcomment.php">
-                                問題
-                              </a></li>
                                         <div class="clear"></div>
                                     </ul>
                                 </div>
@@ -542,7 +524,7 @@
                                             <input type="text" value="" name="q">
                                         </span>
                                         <span class="pandt">
-                                            <input type="submit" value="搜尋標題">
+                                            <button type="submit">搜尋標題</button>
                                         </span>
                                     </form>
                                 <ul class="model">
@@ -1043,6 +1025,26 @@
     <script type="text/javascript" src="style/js/ez_basic.js"></script>
     <script type="text/javascript" src="style/js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="style/js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // build a variable to target the #menu div
+        var menu = $('#menu')
+            // bind a click function to the menu-trigger
+        $('#menu-trigger').click(function(event) {
+            event.preventDefault();
+            // if the menu is visible slide it up
+            if (menu.is(":visible")) {
+                menu.slideUp(400);
+                $(this).removeClass("open");
+            }
+            // otherwise, slide the menu down
+            else {
+                menu.slideDown(400);
+                $(this).addClass("open");
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
