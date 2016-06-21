@@ -1,3 +1,6 @@
+.orange-icon {
+  color:orange;
+}
 .img-sprite, .img-PageLast, .page_area a.PageLast:before, .img-PageLast_disabled, .img-PageNext, .img-PageNext_disabled, .img-facebook, .HD_Social_item.facebook, .img-googleplus, .HD_Social_item.google, .img-link_fb, .img-link_in, .img-link_mail, .img-myComment, .img-myInfo, .HD_MemberTool_item#myInfo:before, .img-myLogout, .HD_MemberTool_item#myLogout:before, .img-myPromotion, .HD_MemberTool_item#myPromotion:before, .img-myRss, .img-mySearch, .HD_MemberTool_item#mySearch:before, .img-myWantList, .HD_MemberTool_item#myWantList:before, .img-search, .HD_Search_btn, .img-search_btn, .img-share_arr, .img-share_arr02, .img-share_fb, .img-share_google, .img-userPhoto {
   background: url('../images/img-s47f52086ff.png') no-repeat;
 }
