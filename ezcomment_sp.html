@@ -27,119 +27,6 @@
     <link href="http://ezprice.com.tw/style/css/ezprice1215.css?v=2015" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="http://ezprice.com.tw/css/confirm.css?v=20150716" />
     <link href="http://ezprice.com.tw/style/css/for_search_page.css?v=2016" rel="stylesheet" type="text/css" />
-    <link href="http://ezprice.com.tw/style/css/font-awesome.min.css?v=2016" rel="stylesheet" type="text/css" />
-    <!-- Google analysis -->
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    var pluginUrl = (('https:' == document.location.protocol) ?
-            'https://ssl.' : 'http://www.') +
-        'google-analytics.com/plugins/ga/inpage_linkid.js';
-    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-    _gaq.push(['_setAccount', 'UA-15824313-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-    <!-- Add jQuery library -->
-    <script src="http://ezprice.com.tw/js/jquery-1.8.3.min.js"></script>
-    <!-- Add mousewheel plugin (this is optional) -->
-    <script type="text/javascript" src="http://ezprice.com.tw/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" async="true"></script>
-    <!-- Add fancyBox main JS and CSS files -->
-    <script type="text/javascript" src="http://ezprice.com.tw/fancybox/source/jquery.fancybox-min.js?v=2.1.5" async="true"></script>
-    <link rel="stylesheet" type="text/css" href="http://ezprice.com.tw/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-    <script type="text/javascript">
-    document.domain = "ezprice.com.tw";
-
-    function MM_preloadImages() { //v3.0
-        var d = document;
-        if (d.images) {
-            if (!d.MM_p) d.MM_p = new Array();
-            var i, j = d.MM_p.length,
-                a = MM_preloadImages.arguments;
-            for (i = 0; i < a.length; i++)
-                if (a[i].indexOf("#") != 0) {
-                    d.MM_p[j] = new Image;
-                    d.MM_p[j++].src = a[i];
-                }
-        }
-    }
-
-    function checksearch(theform) {
-        document.getElementById("srhbox1").style.display = "none";
-        document.getElementById("srhbox2").style.display = "block";
-        theform.submit();
-        return true;
-    }
-    document.onreadystatechange = function() {
-        if (document.readyState == "complete") {
-            x = document.getElementsByName("delayelm");
-            for (i = 0; i < x.length; i++)
-                if ("" != x[i].getAttribute("picurl")) x[i].src = x[i].getAttribute("picurl");
-        }
-    }
-    </script>
-    <link href="http://ezprice.com.tw/css/srch_min.css" rel="stylesheet" type="text/css" />
-    <!-- 將此標記放在標頭中，或是結尾內文標記前方 -->
-    <script type="text/javascript">
-    window.___gcfg = {
-        lang: 'zh-TW',
-        parsetags: 'onload'
-    };
-    (function() {
-        var po = document.createElement('script');
-        po.type = 'text/javascript';
-        po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-    })();
-    </script>
-    <!-- google ads -->
-    <script type='text/javascript'>
-    var googletag = googletag || {};
-    googletag.cmd = googletag.cmd || [];
-    (function() {
-        var gads = document.createElement('script');
-        gads.async = true;
-        gads.type = 'text/javascript';
-        var useSSL = 'https:' == document.location.protocol;
-        gads.src = (useSSL ? 'https:' : 'http:') +
-            '//www.googletagservices.com/tag/js/gpt.js';
-        var node = document.getElementsByTagName('script')[0];
-        node.parentNode.insertBefore(gads, node);
-    })();
-    </script>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() {
-        googletag.defineSlot('/4413605/all-banner', [728, 90], 'div-gpt-ad-1425611988661-0').addService(googletag.pubads());
-        googletag.defineSlot('/4413605/ezprice-side-160x600', [160, 600], 'div-gpt-ad-1425611988661-1').addService(googletag.pubads());
-        googletag.defineSlot('/4413605/比價頁300x250', [300, 250], 'div-gpt-ad-1435632276158-0').addService(googletag.pubads());
-        googletag.defineSlot('/4413605/multi_left_200x200', [200, 200], 'div-gpt-ad-1435632911064-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-    });
-    </script>
-    <script type="text/javascript" src="http://ezprice.com.tw/multi/js/jquery.suggest_search_new.js?t=20160307"></script>
-    <script async src="http://ezprice.com.tw/js/sidebar_new.js?c=20130205.1"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        //$("#srhkw1").suggest("/suggest.php?act=srhkw","");
-        $("#srhkw1").suggest("http://api.ezprice.com.tw/suggest/suggest_v2016.php?act=srhkw", "");
-    });
-    </script>
-    <script>
-    function eznonepic(obj) {
-        obj.src = 'http://ezprice.com.tw/images/common/notready.gif';
-    }
-    </script>
-    <script async src="http://ezprice.com.tw/multi/js/header_template_events_new.js"></script>
-    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=23143173"></script>
 </head>
 
 <body>
@@ -468,7 +355,10 @@
                                     新手媽咪討論區
                                 </div>
                                 <div class="pgevt_menubox">
-                                    <ul>
+                                    <a href="#" id="menu-trigger">過敏防蟎大作戰
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul id="menu">
                                         <li class="pgevtstate_off">
                                             <a href="http://evt.ezprice.com.tw/ezcomment.php?ty=new">最新分享</a>
                                         </li>
@@ -516,14 +406,14 @@
                                         </p>
                                     </ul>
                                     <div class="clear"></div>
-                                        <form action="/ezcomment.php" method="get" enctype="multipart/form-data" class="search-title">
-                                            <span class="pic">
+                                    <form action="/ezcomment.php" method="get" enctype="multipart/form-data" class="search-title">
+                                        <span class="pic">
                                                 <input type="text" value="" name="q">
                                             </span>
-                                            <span class="pandt">
+                                        <span class="pandt">
                                                 <input type="submit" value="搜尋標題">
                                             </span>
-                                        </form>
+                                    </form>
                                     <ul class="model">
                                         <li><a href='postPage.html' class="post-botton">發表文章</a></li>
                                     </ul>
@@ -1286,6 +1176,57 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="clear"></div>
+                            <div class="hot_artBox">
+                                <h3>熱門文章</h3>
+                                <ul class="art_mdList">
+                                    <li class="md_listItem">
+                                        <img src="http://i2.wp.com/img.ezprice.com.tw/guide/2015/05/DDD3-650x393.png" alt="日本必買 10大電器" />
+                                        <h4>【日本必買的10大電器】讓你不敢相信這是真的，價格都幫你整理好了！ - EZprice購物達人(2016年更新)</h4>
+                                        <div class="md_info">
+                                            <div class="md_infoView">1,472,129人看過</div>
+                                            <div class="md_infoDate">2016/03/29</div>
+                                        </div>
+                                        <a href="#" class="link-block"></a>
+                                    </li>
+                                    <li class="md_listItem">
+                                        <img src="http://i2.wp.com/img.ezprice.com.tw/guide/2016/05/%E3%84%8E-650x340.png" alt="lg laundry" />
+                                        <h4>【抗敏洗衣機推薦】過敏人怎麼挑洗衣機？該挑什麼功能？一篇全解惑</h4>
+                                        <div class="md_info">
+                                            <div class="md_infoView">25,831人看過</div>
+                                            <div class="md_infoDate">2016/06/02</div>
+                                        </div>
+                                        <a href="#" class="link-block"></a>
+                                    </li>
+                                    <li class="md_listItem">
+                                    <img src="http://i2.wp.com/img.ezprice.com.tw/guide/2016/05/%E6%B4%97%E8%A1%A3%E6%A9%9F.png" alt="洗衣機" />
+                                        <h4>【 滾筒式洗衣機 推薦 】哪一款滾筒式洗衣機最適合在台灣使用？</h4>
+                                        <div class="md_info">
+                                            <div class="md_infoView">21,358人看過</div>
+                                            <div class="md_infoDate">2016/06/06</div>
+                                        </div>
+                                        <a href="#" class="link-block"></a>
+                                    </li>
+                                    <li class="md_listItem">
+                                        <img src="http://i2.wp.com/img.ezprice.com.tw/guide/2016/05/12121212-650x340.png" alt="冰箱" />
+                                        <h4>【必看】冰箱挑選指南，掌握這些要點！挑出令人羨慕的好冰箱！</h4>
+                                        <div class="md_info">
+                                            <div class="md_infoView">25,335人看過</div>
+                                            <div class="md_infoDate">2016/06/02</div>
+                                        </div>
+                                        <a href="#" class="link-block"></a>
+                                    </li>
+                                    <li class="md_listItem">
+                                        <img src="http://i2.wp.com/img.ezprice.com.tw/guide/2016/06/info_content_2-650x339.jpg" alt="III" />
+                                        <h4>【 十大體脂計排行推薦 】體脂計當然要先比價再買，不想買貴看這篇！</h4>
+                                        <div class="md_info">
+                                            <div class="md_infoView">91,396人看過</div>
+                                            <div class="md_infoDate">2016/03/16</div>
+                                        </div>
+                                        <a href="#" class="link-block"></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -1388,6 +1329,119 @@
             <div class="clear"></div>
         </div>
     </div>
+    <script src="http://use.fontawesome.com/a20778cb0f.js"></script>
+    <!-- Google analysis -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    var pluginUrl = (('https:' == document.location.protocol) ?
+            'https://ssl.' : 'http://www.') +
+        'google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-15824313-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    <!-- Add jQuery library -->
+    <script src="http://ezprice.com.tw/js/jquery-1.8.3.min.js"></script>
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="http://ezprice.com.tw/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" async="true"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="http://ezprice.com.tw/fancybox/source/jquery.fancybox-min.js?v=2.1.5" async="true"></script>
+    <link rel="stylesheet" type="text/css" href="http://ezprice.com.tw/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script type="text/javascript">
+    document.domain = "ezprice.com.tw";
+
+    function MM_preloadImages() { //v3.0
+        var d = document;
+        if (d.images) {
+            if (!d.MM_p) d.MM_p = new Array();
+            var i, j = d.MM_p.length,
+                a = MM_preloadImages.arguments;
+            for (i = 0; i < a.length; i++)
+                if (a[i].indexOf("#") != 0) {
+                    d.MM_p[j] = new Image;
+                    d.MM_p[j++].src = a[i];
+                }
+        }
+    }
+
+    function checksearch(theform) {
+        document.getElementById("srhbox1").style.display = "none";
+        document.getElementById("srhbox2").style.display = "block";
+        theform.submit();
+        return true;
+    }
+    document.onreadystatechange = function() {
+        if (document.readyState == "complete") {
+            x = document.getElementsByName("delayelm");
+            for (i = 0; i < x.length; i++)
+                if ("" != x[i].getAttribute("picurl")) x[i].src = x[i].getAttribute("picurl");
+        }
+    }
+    </script>
+    <link href="http://ezprice.com.tw/css/srch_min.css" rel="stylesheet" type="text/css" />
+    <!-- 將此標記放在標頭中，或是結尾內文標記前方 -->
+    <script type="text/javascript">
+    window.___gcfg = {
+        lang: 'zh-TW',
+        parsetags: 'onload'
+    };
+    (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+    </script>
+    <!-- google ads -->
+    <script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+            '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    </script>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/4413605/all-banner', [728, 90], 'div-gpt-ad-1425611988661-0').addService(googletag.pubads());
+        googletag.defineSlot('/4413605/ezprice-side-160x600', [160, 600], 'div-gpt-ad-1425611988661-1').addService(googletag.pubads());
+        googletag.defineSlot('/4413605/比價頁300x250', [300, 250], 'div-gpt-ad-1435632276158-0').addService(googletag.pubads());
+        googletag.defineSlot('/4413605/multi_left_200x200', [200, 200], 'div-gpt-ad-1435632911064-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
+    </script>
+    <script type="text/javascript" src="http://ezprice.com.tw/multi/js/jquery.suggest_search_new.js?t=20160307"></script>
+    <script async src="http://ezprice.com.tw/js/sidebar_new.js?c=20130205.1"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        //$("#srhkw1").suggest("/suggest.php?act=srhkw","");
+        $("#srhkw1").suggest("http://api.ezprice.com.tw/suggest/suggest_v2016.php?act=srhkw", "");
+    });
+    </script>
+    <script>
+    function eznonepic(obj) {
+        obj.src = 'http://ezprice.com.tw/images/common/notready.gif';
+    }
+    </script>
+    <script async src="http://ezprice.com.tw/multi/js/header_template_events_new.js"></script>
+    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=23143173"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('.fancybox').fancybox({
@@ -1435,6 +1489,26 @@
     <script type="text/javascript" src="style/js/ez_basic.js"></script>
     <script type="text/javascript" src="style/js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="style/js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // build a variable to target the #menu div
+        var menu = $('#menu')
+            // bind a click function to the menu-trigger
+        $('#menu-trigger').click(function(event) {
+            event.preventDefault();
+            // if the menu is visible slide it up
+            if (menu.is(":visible")) {
+                menu.slideUp(400);
+                $(this).removeClass("open");
+            }
+            // otherwise, slide the menu down
+            else {
+                menu.slideDown(400);
+                $(this).addClass("open");
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
