@@ -1913,14 +1913,14 @@ a:link, a:visited {
   }
   .page_area .nth-num {
     display: inline-block;
-    padding: 3px 16px;
+    padding: 2px 16px;
     /* height: auto; */
     background: #f6f6f6;
     border-top: 1px solid #aaaaaa;
     border-bottom: 1px solid #aaaaaa;
     color: #333333;
     font-size: 14px;
-    height: 32px;
+    height: 34px;
 }
 }
 
