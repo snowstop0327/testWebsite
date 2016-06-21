@@ -98,12 +98,12 @@ div.more_product {
 
 .search-title .pandt button {
 	height: 36px;
-    width: 98px;
-    font-size: 1.5em;
-    background: orange;
-    color: #FFF;
-    border: none;
-    cursor: pointer;
+	width: 98px;
+	font-size: 15px;
+	background: orange;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
 }
 
 .search-title .pic input {
@@ -276,7 +276,7 @@ ul.tags_box li {
 	.search-title .pic input {
 		width: 70%;
 	}
-	.search-title .pandt input {
+	.search-title .pandt button {
 	    width: 27%;
 	}
 	.page_content_L_column .pgevt_titlebox .pgevt_title {
