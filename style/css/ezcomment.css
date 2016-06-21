@@ -13,6 +13,15 @@
     filter: alpha(opacity=1);
 }
 
+.info-text {
+	font-size: 10px;
+	color: #999;
+}
+
+.info-text span {
+	padding-right: 5px;
+}
+
 /* ==== 頭部修改 ==== */
 
 #headbox {
@@ -760,7 +769,7 @@ ul li .evt-info .evt-textbox {
 		height: auto;
 	}
  	.page_content_L_column .pgevtlist .pgevttop .pgevtad {
-		height: 220px;
+		height: 250px;
 		}
  	.page_content_L_column .pgevtlist .pgevttop .pgevttxt a {
  		font-size: 1.5em;
@@ -825,4 +834,4 @@ ul li .evt-info .evt-textbox {
     position: absolute;
     top: -9999px;
     left: -9999px;
-ft: -9999
+ft: -99  
