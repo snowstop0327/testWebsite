@@ -167,17 +167,17 @@ ul.tags_box li {
 	padding: 10px;
 }
 
-#menu-trigger span.arrow {
+#menu-trigger i.arrow {
 	display: block;
 	position: absolute;
 	top: 11px;
 	right: 15px;
-	width: 20px;
-	height: 22px;
-	background: url(../img/menu-arrow_sprite.png) no-repeat;
+	// width: 20px;
+	// height: 22px;
+	// background: url(../img/menu-arrow_sprite.png) no-repeat;
 }
 
-#menu-trigger.open span.arrow {
+#menu-trigger.open i.arrow {
 	background-position: 0 -20px;
 }
 
