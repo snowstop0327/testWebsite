@@ -96,7 +96,7 @@ div.more_product {
 	margin: 10px 0;
 }
 
-.search-title .pandt input {
+.search-title .pandt button {
 	height: 36px;
     width: 98px;
     font-size: 1.5em;
@@ -110,6 +110,7 @@ div.more_product {
 	width: 200px;
 	height: 32px;
 	font-size: 1.5em;
+	border: 1px solid #aaa;
 }
 
  .model li.pandt, .model li.pic {
