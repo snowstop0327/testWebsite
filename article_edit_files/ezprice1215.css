@@ -1,0 +1,201 @@
+/* line 1, ../sass/page/_new_productPage.sass */
+.p_name {
+  display: inline-block;
+  width: 58%;
+  float: left;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+/* line 7, ../sass/page/_new_productPage.sass */
+.art_shareBox {
+  display: inline-block;
+  float: right;
+}
+
+/* line 10, ../sass/page/_new_productPage.sass */
+.shareBox {
+  float: left;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: normal;
+}
+/* line 14, ../sass/page/_new_productPage.sass */
+.shareBox ._block {
+  float: left;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 17, ../sass/page/_new_productPage.sass */
+.shareBox ._block + ._block {
+  margin-left: 5px;
+}
+/* line 19, ../sass/page/_new_productPage.sass */
+.shareBox ._block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 23, ../sass/page/_new_productPage.sass */
+.shareBox ._share {
+  display: inline-block;
+  background: #495163;
+  color: white;
+  font-size: 13px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+/* line 30, ../sass/page/_new_productPage.sass */
+.shareBox ._fb {
+  background-color: #3b5998;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 37, ../sass/page/_new_productPage.sass */
+.shareBox ._fb:hover {
+  background-color: #3a5da8;
+  -webkit-box-shadow: 0 4px 0 #1d356a;
+  -moz-box-shadow: 0 4px 0 #1d356a;
+  box-shadow: 0 4px 0 #1d356a;
+  margin-top: -4px;
+}
+/* line 43, ../sass/page/_new_productPage.sass */
+.shareBox ._google {
+  background-color: #d14333;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 50, ../sass/page/_new_productPage.sass */
+.shareBox ._google:hover {
+  background-color: #e35140;
+  -webkit-box-shadow: 0 4px 0 #ba3020;
+  -moz-box-shadow: 0 4px 0 #ba3020;
+  box-shadow: 0 4px 0 #ba3020;
+  margin-top: -4px;
+}
+/* line 56, ../sass/page/_new_productPage.sass */
+.shareBox ._twitter {
+  background-color: #5ea9dd;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 63, ../sass/page/_new_productPage.sass */
+.shareBox ._twitter:hover {
+  background-color: #84c2ee;
+  -webkit-box-shadow: 0 4px 0 #4d93c4;
+  -moz-box-shadow: 0 4px 0 #4d93c4;
+  box-shadow: 0 4px 0 #4d93c4;
+  margin-top: -4px;
+}
+/* line 69, ../sass/page/_new_productPage.sass */
+.shareBox ._linebox {
+  background-color: #00c300;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 76, ../sass/page/_new_productPage.sass */
+.shareBox ._linebox:hover {
+  background-color: #18d618;
+  -webkit-box-shadow: 0 4px 0 #009500;
+  -moz-box-shadow: 0 4px 0 #009500;
+  box-shadow: 0 4px 0 #009500;
+  margin-top: -4px;
+}
+/* line 82, ../sass/page/_new_productPage.sass */
+.shareBox span {
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+}
+/* line 89, ../sass/page/_new_productPage.sass */
+.shareBox ._num {
+  float: left;
+  position: relative;
+}
+/* line 92, ../sass/page/_new_productPage.sass */
+.shareBox ._num + ._block {
+  margin-left: 5px;
+}
+/* line 94, ../sass/page/_new_productPage.sass */
+.shareBox .img-share_arr {
+  position: absolute;
+  left: 0;
+}
+/* line 97, ../sass/page/_new_productPage.sass */
+.shareBox ._text {
+  background-color: #ececec;
+  display: inline-block;
+  line-height: 32px;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #656c7d;
+  cursor: pointer;
+  margin-left: 6px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: top;
+}
+
+/* line 109, ../sass/page/_new_productPage.sass */
+.img-share_fb, .img-share_google, .img-share_arr, .img-share_arr {
+  background: url("http://i.imgur.com/HnKIFZF.png") no-repeat;
+}
+
+/* line 112, ../sass/page/_new_productPage.sass */
+.img-share_fb {
+  background-position: 0 -1582px;
+  height: 32px;
+  width: 32px;
+}
+
+/* line 116, ../sass/page/_new_productPage.sass */
+.img-share_arr {
+  background-position: 0 -1634px;
+  height: 32px;
+  width: 6px;
+}
+
+/* line 120, ../sass/page/_new_productPage.sass */
+.img-share_google {
+  background-position: 0 -990px;
+  height: 32px;
+  width: 32px;
+}
+
+/* line 124, ../sass/page/_new_productPage.sass */
+.img-share_twitter {
+  background: url("http://i.imgur.com/HPYoHwW.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+}
+
+/* line 131, ../sass/page/_new_productPage.sass */
+.img-share_line {
+  background: url("http://i.imgur.com/uOvvub7.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+}

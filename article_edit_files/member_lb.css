@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*********----會員登入區塊 start----*********/
+.member_lbbox{
+	height: 430px;
+	width: 600px;
+}
+.mblb_title{
+	text-align: center;
+	font-size: 40px;
+	color: #ff6706;
+	line-height: 42px;
+	padding-bottom: 10px;
+}
+.mblb_mainbd{
+	padding-top: 10px;
+}
+.mblb_mbdL{
+	float: left;
+	height: 330px;
+	width: 180px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a8adb9;
+}
+.mblb_mbdR{
+	float: right;
+	width: 320px;
+}
+.mblb_content{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.mblb_content ul{
+	margin: 0px;
+	padding: 0px;
+}
+.mblb_content ul li{
+	margin: 0px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	list-style-type: none;
+}
+.mblb_fbbtn{
+	background-image: url(../images/btn_fblogin.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: block;
+	height: 42px;
+	width: 160px;
+	text-indent: -9999px;
+}
+.mblb_fbbtn:active{
+	background-position: left 1px;
+}
+.mblb_rem_position{
+	position: relative;
+	height: 40px;
+}
+.mblb_rempd{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+.mblb_remL{
+	float: left;
+	z-index: 25;
+	position: absolute;
+}
+.mblb_remR{
+	float: right;
+	width: 300px;
+	text-align: right;
+	z-index: 30;
+	position: absolute;
+}
+.mblb_explain{
+	font-size: 13px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+.mblb_regbd{
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.mblb_fbpwbd{
+	width: 380px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.mblb_picbox{
+	height: 140px;
+	width: 140px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 rgba(0%,0%,0%,0.5);
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.mblb_fbenterbox{
+	padding-top: 8px;
+}
+/*********----會員登入區塊 end----*********/
+
+
+/*********----聯絡我們區塊 start----*********/
+.contact_lbbox{
+	height: 490px;
+	width: 570px;
+}
+.ctlb_title{
+	text-align: left;
+	font-size: 30px;
+	color: #ff6706;
+	line-height: 42px;
+	padding-bottom: 5px;
+}
+.ctlb_mainbd{
+	padding-top: 0px;
+}
+.ctlb_mainbd ul{
+	margin: 0px;
+	padding-top: 6px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.ctlb_mainbd ul li{
+	margin: 0px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	list-style-type: none;
+}
+/*********----聯絡我們區塊 end----*********/

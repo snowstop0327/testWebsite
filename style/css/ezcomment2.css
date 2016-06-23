@@ -361,8 +361,9 @@ html, body {
 @media (max-width: 480px) {
   .jScr .fixwight {
     max-width: 490px;
-    padding-left: 10px;
-    padding-right: 10px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -370,6 +371,9 @@ html, body {
     content: "";
     display: table;
     clear: both;
+  }
+  #content_box {
+    padding: 0;
   }
 }
 
@@ -2866,7 +2870,7 @@ a:link, a:visited {
 }
 .art_npBox ._previous a:before{
   position: absolute;
-  content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹';
+  content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¹';
   top: 18px;
   left: 13px;
   color: #ff6706;
@@ -2892,7 +2896,7 @@ a:link, a:visited {
 }
 .art_npBox ._next a:after{
   position: absolute;
-  content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Âº';
+  content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Âº';
   top: 18px;
   right: 13px;
   color: #ff6706;
