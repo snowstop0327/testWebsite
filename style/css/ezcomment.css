@@ -28,14 +28,20 @@
 	min-width: initial;
 }
 
-.search_text {
-	width: auto;
-}
-
 .hot_more_list {
 	width: auto;
 }
-@media (max-width: 850px) {
+@media (max-width: 1220px) {
+	.search_text {
+		width: 300px;
+	}
+}
+@media (max-width: 1000px) {
+	.search_text {
+		width: auto;
+	}
+}
+@media (max-width: 950px) {
 	.head_menu .hot_list {
 		display: none;
 	}
@@ -646,6 +652,9 @@ ul li .evt-info .evt-textbox {
   }
 }
 @media (max-width: 480px) {
+	ul li .evt-info .evt-textbox {
+		width: 70%;
+	}
   .ez-activity .main-box {
     width: 100%;
     float: left;
@@ -923,5 +932,4 @@ ul li .evt-info .evt-textbox {
 		width: 90%;
 		float: initial;
 		margin: 0 auto;
-	}
-}
+   
