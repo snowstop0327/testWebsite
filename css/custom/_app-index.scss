@@ -1,0 +1,54 @@
+nav.is-fixed-top + main {
+    display: inline-block;
+    & >.slider {
+        margin-top: $navbar-height;
+    }
+}
+$bog-bg-height: 615px;
+
+.big-bg {
+    width: 375px;
+    height: $bog-bg-height;
+    position: absolute;
+    top: $navbar-height;
+    left: 0;
+    right: 0;
+    background: purple;
+}
+
+.slider, .tooth , .waist, .special-product {
+    position: relative;
+    max-width: 375px;
+}
+
+.slider {
+    height: 164px;
+    // background-color: crimson;
+    // border: 1px solid #e1e1e1;
+}
+
+.tooth {
+    height: 180px;
+    // border: 1px solid yellow;
+}
+
+.waist {
+    height: 85px;
+    // border: 1px solid yellow;
+}
+
+.special-product {
+    height: 185px;
+    // border: 1px solid orange;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+// .owl-item {
+//     width: 375px !important;
+// }

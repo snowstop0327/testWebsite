@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "ggg";
+  src:url("../img/fonts/ggg.eot");
+  src:url("../img/fonts/ggg.eot?#iefix") format("embedded-opentype"),
+    url("../img/fonts/ggg.woff") format("woff"),
+    url("../img/fonts/ggg.ttf") format("truetype"),
+    url("../img/fonts/ggg.svg#ggg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "ggg" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "ggg" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-activity:before {
+  content: "\61";
+}
+.icon-home:before {
+  content: "\62";
+}
+.icon-hot-sale:before {
+  content: "\63";
+}
+.icon-members:before {
+  content: "\64";
+}
+.icon-tv-shop:before {
+  content: "\65";
+}
+
+
+
+body {
+	background-color: #f7f7f7; 
+}
+.navbar-brand {
+	position: relative;
+	.navbar-item {
+		&.brand-logo {
+			padding: 0 10px 0 0;
+			
+		}
+		&.brand-logo,&.main-logo {
+			img {
+				max-height: 34px;
+			}
+		}
+		&.main-logo {
+			padding: 0;
+			margin: 0 auto;
+		}
+		
+		&.search-input {
+			color: #9B9B9B !important;
+			height: 34px;
+			background-color: #fff;
+			font-size: 12px;
+			padding: 2px 10px;
+			margin: 6px 0;
+			border-radius: 2px;
+			width: calc(100% - 136px);
+			i {
+				margin-left: auto;
+				margin-right: -5px;
+				img {
+					height: 34px;
+					max-height: 34px;
+				}
+			}
+		}
+		&.cart-btn {
+			margin-right: 0;
+			// margin-left: auto;
+			width: $navbar-height;
+		}
+		&.go-back {
+			width: 46px;
+			height: 46px;
+			&.abso {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			&:hover,&:focus {
+				background-color: transparent;
+			}
+			span {
+				margin: 0 auto;
+				display: block;
+				position: relative;
+				&::before, &::after {
+					position: absolute;
+					display: inline-block;
+					content: "";
+					background-color: #fff;
+					width: 10px;
+					height: 2px;
+					transform: rotate(-45deg);
+				}
+				&::before {
+					transform: rotate(45deg);
+					left: -8px;
+					top: 2px;
+				}
+				&::after {
+					left: -8px;
+					top: -4px;
+				} 
+			}
+		}
+	}
+}
+
+.navbar-burger {
+	margin-right: 0;
+	margin-left: 0;
+	span {
+		width: 18px;
+		height: 2px;
+	}
+}
+
+.bottom-tab-bar {
+	width: 100vw;
+	position: fixed;
+	background-color: #fff;
+	bottom: 0;
+	min-height: 50px;
+	box-shadow: 0px -1px 2px rgba($black,0.2);
+	a {
+		padding: 8px 4px;
+		display: block;
+		font-size: 13px;
+		color: #5d5d5d;
+		text-align: center;
+		&.is-active {
+			color: $primary;
+		}
+		i {
+			font-size: 1.5rem;
+		}
+		span {
+			width: 100%;
+		}
+	}
+	.item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+.mg-top {
+	margin-top: 46px;
+}
+
+.mix-pic {
+	img {
+		display: block;
+	}
+}
+
+main {
+	margin-bottom: 60px !important;
+	img {
+		width: 100%;
+	}
+}
+
+.link-blcok {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: auto;
+	&.is-order {
+		top: 3.54%;
+		height: 3.5%;
+		// background: rgba(blue,0.5);
+	}
+	&.is-discount {
+		width: 23.2%;
+		height: 2.3%;
+		top: 7.5%;
+		left: 4.3%;
+		// background: rgba(blue,0.5);
+	}
+	&.is-evoucherlist {
+		width: 23.2%;
+		height: 2.3%;
+		top: 7.5%;
+		left: 27.5%;
+		// background: rgba(blue,0.5);
+	}
+	&.is-wishlist {
+		width: 23.2%;
+		height: 2.3%;
+		top: 7.5%;
+		left: 50.3%;
+		// background: rgba(pink,0.5);
+	}
+	&.is-history {
+		width: 23.2%;
+		height: 2.3%;
+		top: 7.5%;
+		left: 73.3%;
+		// background: rgba(black,0.5);
+	}
+	&.is-account {
+		width: 23.2%;
+		height: 2.3%;
+		top: 19.3%;
+		left: 50.3%;
+		// background: rgba(black,0.5);
+	}
+	&.is-helpcenter {
+		width: 23.2%;
+		height: 2.3%;
+		top: 19.3%;
+		left: 4.3%;
+		// background: rgba(green,0.5);
+	}
+	&.is-contactrecord {
+		width: 23.2%;
+		height: 2.3%;
+		top: 19.3%;
+		left: 27.5%;
+		// background: rgba(green,0.5);
+	}
+	&.is-estore {
+		width: 23.2%;
+		height: 2.3%;
+		top: 16.6%;
+		left: 4.3%;
+		// background: rgba(green,0.5);
+	}
+	&.is-ETMallClub {
+		width: 23.2%;
+		height: 2.3%;
+		top: 16.6%;
+		left: 27.5%;
+		// background: rgba(green,0.5);
+	}
+	&.is-EHSCoin {
+		width: 36.1%;
+		height: 1.9%;
+		top: 1.2%;
+		left: 4.3%;
+		// background: rgba(white,0.5);
+	}
+	&.is-couponlist {
+		width: 36.1%;
+		height: 1.9%;
+		top: 1.2%;
+		left: 40.3%;
+		// background: rgba(white,0.5);
+	}
+	&.is-sp-block {
+		height: 5.9%;
+		top: 10.2%;
+		// background: rgba(blue,0.5);
+	}
+}
+
+.metric {
+	padding: 10%;
+}
+
+.metric svg {
+	max-width: 100%;
+}
+
+.metric path {
+	stroke-width: 20;
+	stroke: #ecf0f1;
+	fill: none;
+}
+
+.metric.participation path.data-arc {
+	stroke: #3498db;
+}
+
+.metric.participation text {
+	fill: #3498db;
+}
+
+.metric.completion path.data-arc {
+	stroke: #27ae60;
+}
+
+.metric.completion text {
+	fill: #27ae60;
+}
+
+.metric.blocked path.data-arc {
+	stroke: #e74c3c;
+}
+
+.metric.blocked text {
+	fill: #e74c3c;
+}
+
+
+
+

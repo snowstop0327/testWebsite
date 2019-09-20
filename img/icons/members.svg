@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>icons/members</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons/members" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
+        <path d="M12,12 C10.0146,12 8.4,10.3854 8.4,8.4 C8.4,6.4146 10.0146,4.8 12,4.8 C13.9854,4.8 15.6,6.4146 15.6,8.4 C15.6,10.3854 13.9854,12 12,12 M17.4,8.4 C17.4,5.4174 14.9826,3 12,3 C9.0174,3 6.6,5.4174 6.6,8.4 C6.6,10.101 7.3884,11.6166 8.6178,12.6057 C5.3247,13.8432 3,16.9005 3,21 L4.8,21 C4.8,16.5 8.0301,13.8 12,13.8 C15.9699,13.8 19.2,16.5 19.2,21 L21,21 C21,16.9005 18.6753,13.8432 15.3822,12.6057 C16.6116,11.6166 17.4,10.101 17.4,8.4 Z" id="Member" fill="#808080"></path>
+    </g>
+</svg>
