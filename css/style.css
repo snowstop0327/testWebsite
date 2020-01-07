@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
 @-webkit-keyframes spinAround {
   from {
@@ -8082,7 +8083,14 @@ label.panel-block {
   content: "\65"; }
 
 body {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: 50px;
+  /* 兼容不支持 env( ) 的设备  */
+  padding-bottom: calc(env(safe-area-inset-bottom) + 50px);
+  /* 在 iphone x + 中本句才会生效 */
+  padding-left: env(safe-area-inset-left); }
 
 .navbar-brand {
   position: relative; }
@@ -8157,6 +8165,7 @@ body {
   background-color: #fff;
   bottom: 0;
   min-height: 50px;
+  padding-bottom: env(safe-area-inset-bottom);
   -webkit-box-shadow: 0px -1px 2px rgba(10, 10, 10, 0.2);
   box-shadow: 0px -1px 2px rgba(10, 10, 10, 0.2); }
   .bottom-tab-bar a {
