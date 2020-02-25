@@ -41,10 +41,12 @@
 	</div>
 	<!-- contenter -->
 	<main class="container mix-pic">
-		<div class="big-bg" style="height: 2000px;">
-			<img src="APP/bgg.jpg" alt="">
+		<div class="search-page">
+			<img src="screen/分類/商品（棋盤）.png" alt="">
 		</div>
-		<div class="filter-bar"></div>
+		<div class="filter-bar">
+			<img src="screen/Filter Bar.png" alt="">
+		</div>
 
 	</main>
 	<!-- tab bar -->
@@ -87,7 +89,7 @@
 	jQuery(document).ready(function ($) {
 		$(window).scroll(function() {
 			var scrollVal = $(this).scrollTop();
-			if (scrollVal > 500) {
+			if (scrollVal > 800) {
 				// $(".popup").removeClass("is-hidden");
 				$(".popup").addClass("is-aninate");
 			} else {

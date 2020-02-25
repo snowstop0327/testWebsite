@@ -337,7 +337,7 @@ main {
 
 .filter-bar {
 	background-color: #fff;
-	height: 40px;
+	height: 86px;
 	position: fixed;
 	top: $navbar-height;
 	width: 100%;
@@ -346,8 +346,8 @@ main {
 $popup-color: #D62672;
 
 .popup {
-	top: $navbar-height + 1.5rem;
-	right: 24px;
+	top: $navbar-height + 1.8rem;
+	right: 36px;
 	z-index: 1000;
 	color: white;
 	padding: 6px 16px;
