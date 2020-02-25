@@ -86,22 +86,23 @@
 	</footer>
 </body>
 <script type="text/javascript">
-	jQuery(document).ready(function ($) {
+
+	jQuery(document).ready(function () {
 		$(window).scroll(function() {
 			var scrollVal = $(this).scrollTop();
-			if (scrollVal > 800) {
+			if (scrollVal >= 800) {
 				// $(".popup").removeClass("is-hidden");
 				$(".popup").addClass("is-aninate");
 				setTimeout(function() {
-				   $(".popup").removeClass("is-aninate");
+				$(".popup").removeClass("is-aninate");
 				}, 3500);
 			}
 			$(".popup").click(function(event) {
-				/* Act on the event */
 				$(this).removeClass("is-aninate");
 			}); 
+			
 		});
+		return false;
 	});
 </script>
-
 </html>
