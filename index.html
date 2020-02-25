@@ -92,10 +92,15 @@
 			if (scrollVal > 800) {
 				// $(".popup").removeClass("is-hidden");
 				$(".popup").addClass("is-aninate");
-			} else {
-				$(".popup").removeClass("is-aninate");
+				setTimeout(function() {
+				   $(".popup").removeClass("is-aninate");
+				}, 3500);
 			}
-		})	
+			$(".popup").click(function(event) {
+				/* Act on the event */
+				$(this).removeClass("is-aninate");
+			}); 
+		});
 	});
 </script>
 

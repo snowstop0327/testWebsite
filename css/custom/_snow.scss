@@ -360,6 +360,8 @@ $popup-color: #D62672;
 	box-shadow: 0px 0px 10px rgba($popup-color, 0.5);
 	transition: all .5s;
 	visibility: hidden;
+	transform-style: preserve-3d;
+	perspective: 5000px;
 
 	&:before {
 		position: absolute;
