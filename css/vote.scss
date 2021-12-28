@@ -9,34 +9,119 @@
 
 body {
     color: #323232;
+    background-color: #FFC9E6;
+}
+
+$main-outer: 15px;
+$image-width: 80%;
+$element-space: 2%;
+
+$group1-color: #7B61FF;
+$group2-color: #FF748E;
+
+main {
+    padding-left: $main-outer;
+    padding-right: $main-outer;
+    padding-bottom: $main-outer;
+    min-height: 100vh;
+
 }
 
 .container {
-    margin-left: 15px;
-    margin-right: 15px;
+    flex-grow: 1;
+    width: auto;
 }
 
 .columns {
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-top: 30px;
+    margin-right: -5px;
+    margin-left: -5px;
+    padding-top: 30px;
 }
 
 .column {
-    padding: 15px;
+    padding: 5px;
 }
 
 .card {
     // width: 50%;
-    background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
-    img {
-        display: inline-block;
-    }
+    padding: 5%;
+    font-size: 3vw;
+    border: 0;
+    box-shadow: none;
+    color: #323232;
+
     .is-cover {
-        width: 75%;
+        width: $image-width;
+        display: block;
         margin: 0 auto;
         text-align: center;
     }
+    figure {
+        margin-bottom: $element-space;
+    }
+
+    button {
+        border-radius: 0;
+        background-color: $group1-color;
+        color: #fff;
+        font-size: 1.7em;
+        font-weight: bold;
+        padding-top: 3.6%;
+        padding-bottom: 3.6%;
+        height: auto;
+        &:hover {
+            color: #fff;
+            background-color: darken($group1-color,10);
+        }
+    }
+    &.card-2 {
+        button {
+            background-color: $group2-color;
+            &:hover {
+                color: #fff;
+                background-color: darken($group2-color,10);
+            }
+        }
+        .votes {
+            strong {
+                color: $group2-color;
+            }
+        }
+    }
+}
+
+.contestants-number {
+    display: block;
+    width: $image-width;
+    color: #fff;
+    padding: 0.2%;
+    background-color: rgba(#323232,0.6);
+    text-align: center;
+    margin: 0 auto;
+}
+.contestants-name {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: $element-space;
+}
+
+.votes {
+    margin-bottom: $element-space;
+    strong {
+        font-size: 1.5em;
+        color: $group1-color;
+        font-weight: bold;
+    }
+}
+
+@include tablet {
+    .card {
+        font-size: 16px;
+        button {
+            font-size: 1.125rem;
+        }
+    }
+
 }
