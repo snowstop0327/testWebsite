@@ -9,100 +9,41 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="theme-color" content="#CC1E05">
-	<title>搜尋頁demo-ETMall東森購物</title>
+	<meta name="theme-color" content="#f7f7f7">
+	<title>投票頁</title>
 	<link rel="shortcut icon" href="img/favicon.png">
 	<!-- Style -->
-	<link rel="stylesheet" href="APP/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="APP/assets/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- JS -->
-	<script src="APP/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/vote.css">
 </head>
 
 <body>
 	<!-- header -->
-	<nav class="is-fixed-top is-primary navbar" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand">
-			<a role="button" href="/" class="navbar-burger" aria-label="menu" aria-expanded="false">
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-			</a>
-			<a class="navbar-item brand-logo" href="/">
-				<img src="img/n-logo.svg">
-			</a>
-			<div class="navbar-item search-input">請輸入關鍵字<i><img src="img/search__btn.svg" alt=""></i></div>
-			<a href="cart.html" class="navbar-item cart-btn"><img src="img/icon-svg-Header-Cart.svg" alt="cart"></a>
-		</div>
-	</nav>
-	<div class="popup">
-		還找不到商品嗎？試看看篩選吧
-	</div>
+
 	<!-- contenter -->
-	<main class="container mix-pic">
-		<div class="search-page">
-			<img src="screen/分類/商品（棋盤）.png" alt="">
+	<div class="container">
+		<div class="columns is-mobile is-multiline">
+			<div class="column is-half">
+				<div class="card" style="background-image: url(img/vote-card.jpg);">
+					<figure class="image">
+						<img src="https://gw.alicdn.com/i4/751623268/O1CN01MUBjA71a0n2tUy8QA_!!751623268.jpg_Q75.jpg_.webp" alt="" class="is-cover">
+					</figure>
+					<span>編號：877</span>
+					<h3>我是報名的標題</h3>
+					<div class="vote-number">
+						<span>票數</span>
+						<strong>90,999</strong>
+					</div>
+					<button class="button">前往投票</button>
+				</div>
+			</div>
+			<div class="column is-half">
+				<div class="card">
+					4884864684
+				</div>
+			</div>
 		</div>
-		<div class="filter-bar">
-			<img src="screen/Filter Bar.png" alt="">
-		</div>
-
-	</main>
+	</div>
 	<!-- tab bar -->
-	<footer class="bottom-tab-bar">
-		<ul class="columns is-mobile is-gapless">
-			<li class="column">
-				<a class="item is-active" href="/">
-					<i class="icon icon-home"></i>
-					<span>首頁</span>
-				</a>
-			</li>
-			<li class="column">
-				<a class="item" href="hot-sale.html">
-					<i class="icon icon-hot-sale"></i>
-					<span>熱銷榜</span>
-				</a>
-			</li>
-			<li class="column">
-				<a class="item" href="activity.html">
-					<i class="icon icon-activity"></i>
-					<span>熱門活動</span>
-				</a>
-			</li>
-			<li class="column">
-				<a class="item" href="tv-shop.html">
-					<i class="icon icon-tv-shop"></i>
-					<span>電視購物</span>
-				</a>
-			</li>
-			<li class="column">
-				<a class="item" href="members.html">
-					<i class="icon icon-members"></i>
-					<span>會員</span>
-				</a>
-			</li>
-		</ul>
-	</footer>
 </body>
-<script type="text/javascript">
 
-	jQuery(document).ready(function () {
-		$(window).scroll(function() {
-			var scrollVal = $(this).scrollTop();
-			if (scrollVal >= 800) {
-				// $(".popup").removeClass("is-hidden");
-				$(".popup").addClass("is-aninate");
-				setTimeout(function() {
-				$(".popup").removeClass("is-aninate");
-				}, 3500);
-			}
-			$(".popup").click(function(event) {
-				$(this).removeClass("is-aninate");
-			}); 
-			
-		});
-		return false;
-	});
-</script>
 </html>
