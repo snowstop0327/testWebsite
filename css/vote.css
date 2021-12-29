@@ -8134,7 +8134,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 body {
   color: #323232;
-  background-color: #FFC9E6; }
+  background-color: #4b5f8f; }
 
 main {
   padding-left: 15px;
@@ -8150,8 +8150,7 @@ main {
 
 .columns {
   margin-right: -5px;
-  margin-left: -5px;
-  padding-top: 30px; }
+  margin-left: -5px; }
 
 .column {
   padding: 5px; }
@@ -8221,33 +8220,38 @@ main {
     color: #7B61FF;
     font-weight: bold; }
 
-.top-card figure {
-  margin-top: 12%;
-  margin-bottom: 0; }
-
-.top-card .is-cover {
-  width: 95%; }
-
-.top-card .contestants-number {
-  width: 95%;
-  margin-bottom: 2%; }
-
-.top-card .contestants-name {
-  font-size: 1.3em;
-  min-height: 1.3em;
-  margin-bottom: 0; }
-
-.top-card .votes {
-  margin-bottom: 0;
-  text-align: right; }
-  .top-card .votes strong {
-    font-size: 1.6em; }
-
-.top-section2 {
-  max-width: 700px;
-  margin: 0 auto; }
+.top-card {
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+  .top-card figure {
+    margin-top: 12%;
+    margin-bottom: 0; }
+  .top-card .is-cover {
+    width: 95%; }
+  .top-card .contestants-number {
+    width: 95%;
+    margin-bottom: 2%; }
+  .top-card .contestants-name {
+    font-size: 1.3em;
+    min-height: 1.3em;
+    margin-bottom: 0; }
+  .top-card .votes {
+    margin-bottom: 0;
+    text-align: right; }
+    .top-card .votes strong {
+      font-size: 1.6em; }
+  .top-card:hover {
+    -webkit-transform: translate(-2%, -2%);
+    -ms-transform: translate(-2%, -2%);
+    transform: translate(-2%, -2%); }
 
 @media screen and (min-width: 769px), print {
+  .column {
+    padding: 10px; }
+  .columns {
+    margin-right: -10px;
+    margin-left: -10px; }
   .card {
     font-size: 16px; }
     .card button {
@@ -8255,4 +8259,7 @@ main {
   .top-card .contestants-name {
     font-size: 1.6em; }
   .top-card .votes strong {
-    font-size: 2em; } }
+    font-size: 2em; }
+  .top-section2 {
+    max-width: 700px;
+    margin: 0 auto; } }

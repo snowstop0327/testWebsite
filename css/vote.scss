@@ -10,7 +10,7 @@
 
 body {
     color: #323232;
-    background-color: #FFC9E6;
+    background-color: #4b5f8f;
 }
 
 $main-outer: 15px;
@@ -37,7 +37,6 @@ main {
 .columns {
     margin-right: -5px;
     margin-left: -5px;
-    padding-top: 30px;
 }
 
 .column {
@@ -127,6 +126,7 @@ main {
 }
 
 .top-card {
+    transition: 0.3s all ease-in-out;
     figure {
         margin-top: 12%;
         margin-bottom: 0;
@@ -150,14 +150,22 @@ main {
             font-size: 1.6em;
         }
     }
+    &:hover {
+        transform: translate(-2%,-2%);
+
+    }
 }
 
-.top-section2 {
-    max-width: 700px;
-    margin: 0 auto;
-}
+
 
 @include tablet {
+    .column {
+        padding: 10px;
+    }
+    .columns {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
     .card {
         font-size: 16px;
         button {
@@ -173,6 +181,10 @@ main {
                 font-size: 2em;
             }
         }
+    }
+    .top-section2 {
+        max-width: 700px;
+        margin: 0 auto;
     }
 
 }
