@@ -1,11 +1,12 @@
 @charset "utf-8";
 
-@import "bulma/utilities/_all.sass";
-@import "bulma/base/_all.sass";
-@import "bulma/elements/_all.sass";
-@import "bulma/components/_all.sass";
-@import "bulma/grid/_all.sass";
-@import "bulma/layout/_all.sass";
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/elements/_all.sass";
+@import "bulma/sass/components/_all.sass";
+@import "bulma/sass/grid/_all.sass";
+@import "bulma/sass/helpers/_all.sass";
+@import "bulma/sass/layout/_all.sass";
 
 body {
     color: #323232;
@@ -15,6 +16,7 @@ body {
 $main-outer: 15px;
 $image-width: 80%;
 $element-space: 2%;
+$top-image-width: 95%;
 
 $group1-color: #7B61FF;
 $group2-color: #FF748E;
@@ -51,6 +53,7 @@ main {
     border: 0;
     box-shadow: none;
     color: #323232;
+    border-radius: 0;
 
     .is-cover {
         width: $image-width;
@@ -100,20 +103,58 @@ main {
     background-color: rgba(#323232,0.6);
     text-align: center;
     margin: 0 auto;
+    
 }
 .contestants-name {
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: $element-space;
+    max-height: 1.5em;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    text-overflow: ellipsis;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
 }
 
 .votes {
     margin-bottom: $element-space;
     strong {
-        font-size: 1.5em;
+        font-size: 1.7em;
         color: $group1-color;
         font-weight: bold;
     }
+}
+
+.top-card {
+    figure {
+        margin-top: 12%;
+        margin-bottom: 0;
+    }
+    .is-cover {
+        width: $top-image-width;
+    }
+    .contestants-number {
+        width: $top-image-width;
+        margin-bottom: 2%;
+    }
+    .contestants-name {
+        font-size: 1.3em;
+        min-height: 1.3em;
+        margin-bottom: 0;
+    }
+    .votes {
+        margin-bottom: 0;
+        text-align: right;
+        strong {
+            font-size: 1.6em;
+        }
+    }
+}
+
+.top-section2 {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 @include tablet {
@@ -121,6 +162,16 @@ main {
         font-size: 16px;
         button {
             font-size: 1.125rem;
+        }
+    }
+    .top-card {
+        .contestants-name {
+            font-size: 1.6em;
+        }
+        .votes {
+            strong {
+                font-size: 2em;
+            }
         }
     }
 
