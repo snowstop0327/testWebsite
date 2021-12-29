@@ -1,0 +1,1496 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>CHANGELOG.md</title>
+      </head>
+      <body>
+        <h1 id="bulma-changelog">Bulma Changelog</h1>
+<h2 id="0-9-3">0.9.3</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>New <code>is-underlined</code> class for underlined text and links</li>
+<li>New <code>auto</code> value for margin and padding helper classes</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>New <code>$section-padding-desktop</code> Sass variable</li>
+<li>New <code>$hero-body-padding-tablet</code> Sass variable</li>
+<li>New <code>$shadow</code> Sass variable (used for <code>.box</code>, <code>.card</code>, <code>.dropdown</code> and <code>.panel</code>)</li>
+<li>Add <code>is-normal</code> size modifiers to <code>.file</code> and <code>.content</code></li>
+<li>New <code>%reset</code> placeholder</li>
+</ul>
+<h3 id="bugfix">Bugfix</h3>
+<ul>
+<li>#3362 Fix slash divide</li>
+</ul>
+<h2 id="0-9-2">0.9.2</h2>
+<h3 id="breaking-change">Breaking change</h3>
+<p>To fix duplicate imports, all Sass placeholders have moved from the <code>utilities/mixins</code> file to its own <code>utilities/extends</code> file.</p>
+<p>The Sass placeholders are:</p>
+<ul>
+<li><code>%control</code></li>
+<li><code>%unselectable</code></li>
+<li><code>%arrow</code></li>
+<li><code>%block</code></li>
+<li><code>%delete</code></li>
+<li><code>%loader</code></li>
+<li><code>%overlay</code></li>
+</ul>
+<p>If you were importing them directly from <code>utilities/mixins</code>, you&#39;ll need to import <code>utilities/extends</code> instead.<br>If you were importing <code>utilities/_all</code> or even <code>bulma.sass</code> directly, no change is required.</p>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>Fix #1583 New <code>is-ghost</code> button that behaves / looks like a regular link</li>
+<li>New <code>icon-text</code> component, to combine an icon with text on its side</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#3005 Fix <code>column</code> offsets in RTL</li>
+<li>Fix #3145 Dropdown content is bounded by a parent card</li>
+<li>Fix #3089 Sub columns of a variable columns have weird gap</li>
+<li>Fix #2937 Add <code>width: unset</code> for narrow columns</li>
+<li>#3208 Fix #3163 Do not override is-rounded with button-small</li>
+<li>#3216 Removed duplicate <code>mixins</code> imports, created a single <code>extends</code> file</li>
+<li>#3216 Removed all references to the <code>.sass</code> file extension have been removed, since they&#39;re unnecessary when there&#39;s no ambiguity between a <code>.sass</code> file or a <code>.scss</code> file</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>Fix #3012 Add <code>$media-*</code> variables, set to <code>!default</code></li>
+<li>Fix #2797 Import dependencies individually for each component</li>
+<li>Remove list style from pagination list</li>
+</ul>
+<h2 id="0-9-1">0.9.1</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#3047 Flexbox helpers</li>
+<li>#3085 Add <code>is-clickable</code> helper</li>
+<li>#3086 Allow each component to have its own colors and default to global ones</li>
+<li>New variables <code>$navbar-colors</code>, <code>$button-colors</code>, <code>$notification-colors</code>, <code>$progress-colors</code>, <code>$table-colors</code>, <code>$tag-colors</code>, <code>$file-colors</code>, <code>$textarea-colors</code>, <code>$select-colors</code>, <code>$form-colors</code>, <code>$label-colors</code> and <code>$hero-colors</code></li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#2630 Fixes #2598 -&gt; Add <code>$card-radius</code> variable</li>
+<li>Add <code>$card-overflow</code> variable</li>
+<li>#2540 Fixes #2539 -&gt; Fix indeterminate progress styling in IE11</li>
+<li>#3057 Make the default text color of <code>$code</code> listings more accessible</li>
+<li>#3088 Adds not allowed cursor to missing inputs</li>
+<li>#3101 Add <code>$modal-breakpoint</code> variable for modal breakpoint</li>
+<li>#3107 Add <code>optgroup</code> to <code>generic.sass</code></li>
+</ul>
+<h2 id="0-9-0">0.9.0</h2>
+<h3 id="deprecation-warning">Deprecation warning</h3>
+<p>The <code>base/helpers.sass</code> file is <strong>deprecated</strong>. It has moved into its own <code>/helpers</code> folder. If you were importing <code>base/helpers.sass</code> or <code>base/_all.sass</code>, please import <code>sass/helpers/_all.sass</code> now.
+If you were simply importing the whole of Bulma with <code>@import &quot;~/bulma/bulma.sass&quot;</code> or similar, you won&#39;t have to change anything, and everything will work as before.</p>
+<p>The <code>list</code> component is also <strong>deprecated</strong>: the <code>components/list.sass</code> file has been deleted. It was never officially supported as it was too similar to <code>panel</code> component. Use that one instead.</p>
+<h3 id="rtl-support">RTL support</h3>
+<p>Bulma now has <strong>RTL support</strong>.</p>
+<p>By setting the Sass flag <code>$rtl</code> to <code>true</code>, you can create an RTL version of Bulma, thanks to 4 new Sass mixins:</p>
+<ul>
+<li><code>=ltr</code></li>
+<li><code>=rtl</code></li>
+<li><code>=ltr-property($property, $spacing, $right: true)</code></li>
+<li><code>=ltr-position($spacing, $right: true)</code></li>
+</ul>
+<p>The Bulma package now also comes with a <code>bulma-rtl.css</code> and <code>bulma-rtl.min.css</code> file to be used straight away.</p>
+<h3 id="spacing-helpers">Spacing helpers</h3>
+<p>Bulma now has <strong>spacing helpers</strong>: <a href="https://bulma.io/documentation/helpers/spacing-helpers/">https://bulma.io/documentation/helpers/spacing-helpers/</a></p>
+<p>Bulma provides <strong>margin</strong> <code>m<em></code> and <strong>padding</strong> <code>p</em></code> helpers in all <strong>directions</strong>:</p>
+
+<ul>
+  <li>
+    <code><em>t</code> for <strong>top</strong>
+  </li>
+  <li>
+    <code></em>r</code> for <strong>right</strong>
+  </li>
+  <li>
+    <code><em>b</code> for <strong>bottom</strong>
+  </li>
+  <li>
+    <code></em>l</code> for <strong>left</strong>
+  </li>
+  <li>
+    <code><em>x</code> horizontally for both <strong>left</strong> and <strong>right</strong>
+  </li>
+  <li>
+    <code></em>y</code> vertically for both <strong>top</strong> and <strong>bottom</strong>
+  </li>
+</ul>
+
+<p>
+  You need to <strong>combine</strong> a margin/padding prefix with a direction suffix. For example:
+</p>
+
+<ul>
+  <li>for a <code>margin-top</code>, use <code>mt-<em></code></li>
+  <li>for a <code>padding-bottom</code>, use <code>pb-</em></code></li>
+  <li>for both <code>margin-left</code> and <code>margin-right</code>, use <code>mx-*</code></li>
+</ul>
+
+<p>
+  Each of these <code>property-direction</code> <strong>combinations</strong> needs to be appended with one of <strong>6 value suffixes</strong>
+</p>
+
+<p>This release also includes the following helpers:</p>
+<ul>
+<li>light and dark color helpers</li>
+<li>light and dark background color helpers</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#2925 Center table cell content vertically with <code>is-vcentered</code></li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#2955 Fix issue when there&#39;s only one <code>is-toggle</code> tag</li>
+</ul>
+<h2 id="0-8-2">0.8.2</h2>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fix #2885 -&gt; Revert <code>$input-color: $text-strong</code></li>
+</ul>
+<h2 id="0-8-1">0.8.1</h2>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#2709 Add light colors to the <code>notification</code> element</li>
+<li>#2740 Fixes #2739 -&gt; Add variables size for layout <code>hero</code></li>
+<li>Fix #2741 -&gt; Create <code>bulmaRgba()</code> function to support <code>inherit</code> value</li>
+<li>#2756 Add <code>$button-text-decoration</code> variable</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#2664 Fixes #2671 -&gt; Add <code>$panel-colors</code> variable</li>
+</ul>
+<h2 id="0-8-0">0.8.0</h2>
+<h3 id="big-update">Big update</h3>
+<h4 id="larger-form-controls">Larger form controls</h4>
+<p>Controls and buttons are now <code>2.5em</code> high. You can revert this resizing by setting these previous values:</p>
+<pre><code class="lang-sass">$control-height: 2.25em
+$control-padding-vertical: calc(0.375em - #{$control-border-width})
+$control-padding-horizontal: calc(0.625em - #{$control-border-width})
+$button-padding-vertical: calc(0.375em - #{$button-border-width})
+$button-padding-horizontal: 0.75em
+</code></pre>
+<h4 id="light-and-dark-colors">Light and dark colors</h4>
+<p>Each main color (<code>&quot;primary&quot;</code>, <code>&quot;info&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>) now has a <code>*-light</code> and <code>*-dark</code> version. They are calculated using 2 new color functions:</p>
+<ul>
+<li><code>findLightColor()</code> which finds the light version of a color</li>
+<li><code>findDarkColor()</code> which finds the dark version of a color</li>
+</ul>
+<p>The light colors are used by the <code>button</code> element, while the light and dark colors are used by the <code>message</code> component.</p>
+<h4 id="panel-colors">Panel colors</h4>
+<p>The <code>panel</code> component is now available in all the different colors.</p>
+<h4 id="4-value-color-map">4-value color map</h4>
+<p>The <code>$colors</code> Sass map now accepts, for each of its values, a map of up to <strong>4</strong> values. For example: the key <code>&quot;info&quot;</code> now has the <code>($info, $info-invert, $info-light, $info-dark)</code> map.</p>
+<p>If you provide a <code>$custom-colors</code> map, you can decide to provide a map of 1, 2, 3 or 4 values for each value. If fewer than 4 are provided, Bulma will calculate the remaining ones:</p>
+<pre><code class="lang-scss">$custom-colors: (
+  &#39;lime&#39;: (
+    lime,
+  ),
+  &#39;tomato&#39;: (
+    tomato,
+    white,
+  ),
+  &#39;orange&#39;: (
+    $orange,
+    $orange-invert,
+    $orange-light,
+  ),
+  &#39;lavender&#39;: (
+    $lavender,
+    $lavender-invert,
+    $lavender-light,
+    $lavender-dark,
+  ),
+);
+</code></pre>
+<p>This is processed by the updated <code>mergeColorMaps()</code> Sass function.</p>
+<h4 id="scheme-variables">Scheme variables</h4>
+<p>There are 6 new <code>$scheme</code> derived variables: <code>$scheme-main</code> <code>$scheme-main-bis</code> <code>$scheme-main-ter</code> <code>$scheme-invert</code> <code>$scheme-invert-bis</code> <code>$scheme-invert-ter</code>
+They replace the <code>$white</code> and <code>$black</code> occurrences in the codebase. This makes it easy to create a &quot;Dark mode&quot; simply by swapping the values:</p>
+<pre><code class="lang-sass">$scheme-main: $black
+$scheme-invert: $white
+// etc.
+</code></pre>
+<p>That is also why most of the codebase now references <strong>derived</strong> variables (<code>$text</code>, <code>$background</code>, <code>$border</code> etc.) instead of <strong>initial</strong> ones (<code>$grey</code>, <code>$grey-lighter</code>, <code>$grey-darker</code> etc.): updating the derived variables will affect all elements and components directly.</p>
+<h4 id="initial-variables">Initial variables</h4>
+<ul>
+<li><code>$green: hsl(141, 53%, 53%)</code></li>
+<li><code>$cyan: hsl(204, 71%, 53%)</code></li>
+<li><code>$red: hsl(348, 86%, 61%)</code></li>
+</ul>
+<h4 id="derived-variables">Derived variables</h4>
+<ul>
+<li><code>$primary-invert: findColorInvert($primary)</code></li>
+<li><code>$primary-light: findLightColor($primary)</code></li>
+<li><code>$primary-dark: findDarkColor($primary)</code></li>
+<li><code>$info-invert: findColorInvert($info)</code></li>
+<li><code>$info-light: findLightColor($info)</code></li>
+<li><code>$info-dark: findDarkColor($info)</code></li>
+<li><code>$success-invert: findColorInvert($success)</code></li>
+<li><code>$success-light: findLightColor($success)</code></li>
+<li><code>$success-dark: findDarkColor($success)</code></li>
+<li><code>$warning-invert: findColorInvert($warning)</code></li>
+<li><code>$warning-light: findLightColor($warning)</code></li>
+<li><code>$warning-dark: findDarkColor($warning)</code></li>
+<li><code>$danger-invert: findColorInvert($danger)</code></li>
+<li><code>$danger-light: findLightColor($danger)</code></li>
+<li><code>$danger-dark: findDarkColor($danger)</code></li>
+<li><code>$light-invert: findColorInvert($light)</code></li>
+<li><p><code>$dark-invert: findColorInvert($dark)</code></p>
+</li>
+<li><p><code>$scheme-main: $white</code></p>
+</li>
+<li><code>$scheme-main-bis: $white-bis</code></li>
+<li><code>$scheme-main-ter: $white-ter</code></li>
+<li><code>$scheme-invert: $black</code></li>
+<li><code>$scheme-invert-bis: $black-bis</code></li>
+<li><code>$scheme-invert-ter: $black-ter</code></li>
+</ul>
+<h3 id="other-variables">Other variables</h3>
+<ul>
+<li><code>$control-height: 2.5em</code></li>
+<li><code>$control-padding-vertical: calc(0.5em - #{$control-border-width})</code></li>
+<li><code>$control-padding-horizontal: calc(0.75em - #{$control-border-width})</code></li>
+<li><code>$media-border-color: rgba($border, 0.5)</code></li>
+<li><code>$notification-code-background-color: $scheme-main</code></li>
+<li><code>$panel-radius: $radius-large</code></li>
+<li><code>$panel-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1), 0 0px 0 1px rgba($scheme-invert, 0.02)</code></li>
+<li><code>$textarea-padding: $control-padding-horizontal</code></li>
+<li><code>$textarea-max-height: 40em</code></li>
+<li><code>$textarea-min-height: 8em</code></li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fix #2647 -&gt; Missing meta tags in snippet</li>
+<li>Fix #2031, Fix #2483 -&gt; Invalid output when declaring a custom shade map</li>
+<li>Fix #2060 -&gt; <code>height: auto</code> on HTML <code>audio</code> element breaks height of element</li>
+<li>Fix #706 -&gt; Derive <code>-invert</code> variables using <code>findColorInvert()</code></li>
+<li>#1608 Fix #1552 -&gt; <code>.container.is-fluid</code> margins</li>
+</ul>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#2563 <code>.image</code> has a new <code>.is-fullwidth</code> modifier</li>
+</ul>
+<h2 id="0-7-5">0.7.5</h2>
+<h3 id="deprecation-warning">Deprecation warning</h3>
+<p>The <code>form.sass</code> file is <strong>deprecated</strong>. It has moved into its own <code>/form</code> folder. If you were importing <code>form.sass</code>, please import <code>sass/form/_all.sass</code> now.
+If you were simply importing the whole of Bulma with <code>@import &quot;~/bulma/bulma.sass&quot;</code> or similar, you won&#39;t have to change anything, and everything will work as before.</p>
+<h3 id="new-features">New features</h3>
+<h4 id="support-for-overriding-the-font-family">Support for overriding the <code>font-family</code></h4>
+<p>You can now specify a different <code>font-family</code> for the <code>.title</code>, <code>.subtitle</code> and <code>.button</code> by using the variables <code>$title-family</code>, <code>$subtitle-family</code> and <code>$button-family</code> respectively.</p>
+<p>Simply set a value when importing Bulma:</p>
+<pre><code class="lang-scss">$title-family: &#39;Georgia&#39;, serif;
+</code></pre>
+<ul>
+<li>#2375 Add <code>.is-relative</code> helper</li>
+<li>#2321 Make <code>.navbar</code> focus behave like hover for the navigation</li>
+<li>#2290 Fix #1186 -&gt; Reset the offset on columns</li>
+<li>#2231 Add <code>.has-text-weight-medium</code> helper</li>
+<li>#2224 Add customizable border radius to progress bar</li>
+<li>#2480 Add <code>$footer-color</code> variable</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#2396 Update docs with webpack 4 example</li>
+<li>#2381 Make centered buttons have equal margin</li>
+<li>Fix #2297 -&gt; Remove <code>.container</code> fixed width values, use <code>flex-grow</code></li>
+<li>#2478 Move form.sass into its own folder</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#2420 Fix #2414 -&gt; Fix <code>align</code> attribute in <code>td/th</code> being ignored</li>
+<li>#2463 Remove duplicate <code>.has-addons</code> in <code>tag.sass</code></li>
+<li>#2253 Fix <code>$gap</code> variable default value</li>
+<li>#2273 Fix #2258 -&gt; Fix Indeterminate Progress Bar animation in Firefox</li>
+<li>#2175 Proper aligning for <code>.tabs</code> within <code>.content</code></li>
+<li>#2476 Fix #2441 -&gt; Correct active pagination link text color on hero</li>
+</ul>
+<p>Fix #1979 -&gt; Correct loading spinner color when a button is:</p>
+<ul>
+<li>outlined and hovered/focused</li>
+<li>outlined, inverted and hovered/focused</li>
+</ul>
+<h3 id="new-variables">New variables</h3>
+<h4 id="initial-variables">Initial variables</h4>
+<ul>
+<li><code>$block-spacing</code></li>
+</ul>
+<h4 id="base">Base</h4>
+<ul>
+<li><code>$body-font-size</code></li>
+<li><code>$small-font-size</code></li>
+<li><code>$pre-font-size</code></li>
+<li><code>$pre-padding</code></li>
+<li><code>$pre-code-font-size</code></li>
+</ul>
+<h4 id="components">Components</h4>
+<ul>
+<li><code>$card-header-padding</code></li>
+<li><code>$card-content-padding</code></li>
+<li><code>$card-media-margin</code></li>
+<li><code>$dropdown-menu-min-width</code></li>
+<li><code>$dropdown-content-padding-bottom</code></li>
+<li><code>$dropdown-content-padding-top</code></li>
+<li><code>$level-item-spacing</code></li>
+<li><code>$menu-list-line-height</code></li>
+<li><code>$menu-list-link-padding</code></li>
+<li><code>$menu-nested-list-margin</code></li>
+<li><code>$menu-nested-list-padding-left</code></li>
+<li><code>$menu-label-font-size</code></li>
+<li><code>$menu-label-letter-spacing</code></li>
+<li><code>$menu-label-spacing</code></li>
+<li><code>$pagination-item-font-size</code></li>
+<li><code>$pagination-item-margin</code></li>
+<li><code>$pagination-item-padding-left</code></li>
+<li><code>$pagination-item-padding-right</code></li>
+<li><code>$panel-margin</code></li>
+<li><code>$panel-tabs-font-size</code></li>
+</ul>
+<h4 id="elements">Elements</h4>
+<ul>
+<li><code>$container-offset</code></li>
+</ul>
+<h4 id="grid">Grid</h4>
+<ul>
+<li><code>$tile-spacing</code></li>
+</ul>
+<h2 id="0-7-3">0.7.3</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#2145 Fix #372 -&gt; New indeterminate progress bars</li>
+<li>#2206 Fix #2046 -&gt; New variables <code>$table-head-background-color</code>, <code>$table-body-background-color</code> and <code>$table-foot-background-color</code> for the <code>.table</code> element</li>
+<li>#592 -&gt; Give arbitrary elements access to the image/ratio classes</li>
+<li>#1682 Fix #1681 -&gt; Adds disabled styles for <code>&lt;fieldset disabled&gt;</code></li>
+<li>#2201 Fix #1875 -&gt; <code>.buttons</code> and <code>.tags</code> group sizing (<code>.are-small</code>, <code>.are-medium</code>, <code>.are-large</code>)</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#1978 Fix #1696 -&gt; Force <code>box-sizing: border-box</code> on <code>details</code> element</li>
+<li>#2167 Fix #1878 -&gt; New <code>$footer-padding</code> variable</li>
+<li>#2168 -&gt; New <code>$input-placeholder-color</code> and <code>$input-disabled-placeholder-color</code> variables</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#2157 Fix #1656 -&gt; Allow border radius if only one <code>.control</code> in <code>.field</code></li>
+<li>#2091 Fix #2091 -&gt; Remove CSS rule which causes <code>.tag.has-addons</code> to not work correctly</li>
+<li>#2186 Fix #1130 -&gt; Prevent <code>.dropdown</code> links underlining in <code>.message</code> component</li>
+<li>Fix #2154 -&gt; Move <code>.hero.is-fullheight-with-navbar</code> to <code>navbar.sass</code> file</li>
+</ul>
+<h3 id="deprecation">Deprecation</h3>
+<ul>
+<li><code>.control.has-icon</code> deprecated in favor of <code>.control.has-icons</code></li>
+</ul>
+<h2 id="0-7-2">0.7.2</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#1884 New <code>$navbar-burger-color</code> variable</li>
+<li>#1679 Add breakpoint based column gaps</li>
+<li>#1905 Fix <code>modal</code> for IE11 #1902</li>
+<li>#1919 New <code>is-arrowless</code> class for navbar items</li>
+<li>#1949 New <code>is-fullheight-with-navbar</code> class for heros</li>
+<li>#1764 New <code>.is-sr-only</code> helper</li>
+<li>#2109 Add and use <code>$navbar-breakpoint</code> variable</li>
+<li>New variables <code>$control-height</code>, <code>$control-line-height</code>, <code>$pagination-min-width</code>, <code>$input-height</code></li>
+<li>#1720 Add list element feature</li>
+<li>#2123 Add <code>.content ol</code> types: <code>.is-lower-roman</code>, <code>.is-upper-roman</code>, <code>.is-lower-alpha</code>, <code>.is-upper-alpha</code>, and support for the <code>type=</code> HTML attribute</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#1964 Allow <code>.notification</code> to have a <code>.dropdown-item</code></li>
+<li>#1999 Change <code>$border</code> to <code>$grey-lighter</code> in mixins</li>
+<li>#2085 <code>.media-content</code> will allow scrolling horizontally if the content is too wide</li>
+<li>#1744 Fix #1710 by using <code>$table-striped-row-even-hover-background-color</code> only for even rows</li>
+<li>#2074 Allow <code>&lt;button&gt;</code> as <code>.dropdown-item</code></li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#1749 Fix icons floating out of input area</li>
+<li>#1993 Fixes #1992 Prevent disabled form elements hover state from overlapping, if control has add-ons elements</li>
+<li>#1909 Fix Modal card in IE11</li>
+<li>#1908 Fix IE11 when textarea doesn&#39;t listen to <code>size=&quot;&quot;</code></li>
+<li>Fix #1991 The last button in list of full-width buttons has longer width</li>
+<li>#1982 Fix navbar-burger color when color modifier is used</li>
+<li>#1819 Fix #1137 error message for required file</li>
+<li>Fix #1904 and #1969: hide native file input in Chrome</li>
+<li>#2059 Remove unnecessary right margin from last level-item (level.is-mobile)</li>
+</ul>
+<h2 id="0-7-1">0.7.1</h2>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#1789 Add all shades to <code>has-background-*</code> helpers</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#1796 #1806 Remove navbar <code>box-shadow</code> by default</li>
+</ul>
+<h2 id="0-7-0">0.7.0</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>New variables <code>$widescreen-enabled</code> and <code>$fullhd-enabled</code>: you can set them to <code>false</code> to disable each breakpoint</li>
+<li>New variables <code>$control-border-width</code> and <code>$button-border-width</code></li>
+<li>🎉 #1624 Add some common photography aspect ratios and portrait ratios</li>
+<li>🎉 #1747 New <code>$custom-colors</code> and <code>$custom-shades</code> variable for adding your own colors and shades to Bulma&#39;s <code>$colors</code> and <code>$shades</code> maps respectively</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#1619 Add <code>$card-header-background-color</code>, <code>$card-content-background-color</code> and <code>$card-footer-background-color</code> to allow different background customization for card elements</li>
+<li>#1669 Add <code>.is-expanded</code> modifier to <code>.buttons.has-addons</code></li>
+<li>#1628 Add <code>.has-background</code> helpers for block background colors, like <code>.has-text</code></li>
+<li>#1767 Added minified bundle with cleancss</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#1778 Fix <code>is-text-right</code> precedence over <code>is-text-left-mobile</code></li>
+<li>#1571 Fix position of delete button on <code>.tag</code></li>
+<li>#1549 Implementing a simple version of the native sass percentage function</li>
+<li>#1707 Disable table hover in <code>.content</code> by default</li>
+<li>#1428 Fix <code>media-content</code> overflow</li>
+</ul>
+<h3 id="variable-changes">Variable changes</h3>
+<h4 id="updated-default-values">Updated default values</h4>
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="3">
+        File
+        <code>sass/utilities/initial-variables.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$gap</code>
+      </td>
+      <td>
+        <code>32px</code>
+      </td>
+      <td>
+        <code>64px</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$radius</code>
+      </td>
+      <td>
+        <code>3px</code>
+      </td>
+      <td>
+        <code>4px</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$radius-large</code>
+      </td>
+      <td>
+        <code>5px</code>
+      </td>
+      <td>
+        <code>6px</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="3">
+        File
+        <code>sass/base/generic.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$hr-background-color</code>
+      </td>
+      <td>
+        <code>$border</code>
+      </td>
+      <td>
+        <code>$background</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$hr-height</code>
+      </td>
+      <td>
+        <code>1px</code>
+      </td>
+      <td>
+        <code>2px</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="3">
+        File
+        <code>sass/elements/content.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$content-heading-weight</code>
+      </td>
+      <td>
+        <code>$weight-normal</code>
+      </td>
+      <td>
+        <code>$weight-semibold</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="3">
+        File
+        <code>sass/components/message.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$message-header-padding</code>
+      </td>
+      <td>
+        <code>0.5em 0.75em</code>
+      </td>
+      <td>
+        <code>0.75em 1em</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$message-body-padding</code>
+      </td>
+      <td>
+        <code>1em 1.25em</code>
+      </td>
+      <td>
+        <code>1.25em 1.5em</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="3">
+        File
+        <code>sass/components/navbar.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-item-hover-background-color</code>
+      </td>
+      <td>
+        <code>$background</code>
+      </td>
+      <td>
+        <code>$white-bis</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-dropdown-border-top</code>
+      </td>
+      <td>
+        <code>1px solid $border</code>
+      </td>
+      <td>
+        <code>2px solid $border</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-divider-background-color</code>
+      </td>
+      <td>
+        <code>$border</code>
+      </td>
+      <td>
+        <code>$background</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="3">
+        File
+        <code>sass/layout/footer.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>From</th>
+      <th>To</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$footer-background-color</code>
+      </td>
+      <td>
+        <code>$background</code>
+      </td>
+      <td>
+        <code>$white-bis</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="new-variables">New variables</h4>
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="2">
+        File
+        <code>sass/components/breadcrumb.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$breadcrumb-item-padding-vertical</code>
+      </td>
+      <td>
+        <code>0</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$breadcrumb-item-padding-horizontal</code>
+      </td>
+      <td>
+        <code>0.75em</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="2">
+        File
+        <code>sass/components/message.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$message-body-border-color</code>
+      </td>
+      <td>
+        <code>$border</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$message-body-border-width</code>
+      </td>
+      <td>
+        <code>0 0 0 4px</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$message-header-weight</code>
+      </td>
+      <td>
+        <code>$weight-bold</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$message-header-body-border-width</code>
+      </td>
+      <td>
+        <code>0</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="2">
+        File
+        <code>sass/components/navbar.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-box-shadow-size</code>
+      </td>
+      <td>
+        <code>0 2px 0 0</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-box-shadow-color</code>
+      </td>
+      <td>
+        <code>$background</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-padding-vertical</code>
+      </td>
+      <td>
+        <code>1rem</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-padding-horizontal</code>
+      </td>
+      <td>
+        <code>2rem</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$navbar-z</code>
+      </td>
+      <td>
+        <code>30</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th class="is-light" colspan="2">
+        File
+        <code>sass/elements/title.sass</code>
+      </th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>
+        <code>$title-line-height</code>
+      </td>
+      <td>
+        <code>1.125</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$subtitle-line-height</code>
+      </td>
+      <td>
+        <code>1.25</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>$subtitle-negative-margin</code>
+      </td>
+      <td>
+        <code>-1.25rem</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="removed-variables">Removed variables</h4>
+<table class="table is-bordered">
+  <tbody>
+    <tr>
+      <th>File</th>
+      <th>Removed</th>
+      <th>Replaced with</th>
+    </tr>
+    <tr>
+      <td>
+        <code>sass/components/message.sass</code>
+      </td>
+      <td>
+        <code>$message-body-border</code>
+      </td>
+      <td>
+        <code>$message-body-border-color</code>
+        <br>
+        <code>$message-body-border-width</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="0-6-2">0.6.2</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>🎉 Rounded buttons, inputs, pagination and toggle tabs</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#1343 Add <code>sub</code> and <code>sup</code> title sizes</li>
+<li>#1452 New <code>.is-italic</code> helper</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#935 Bug dropdown in <code>hero</code> (primary) menu items not visible</li>
+<li>#1456 Fix customize documentation</li>
+<li>#1190 Add <code>$variable-columns</code> to disable <code>--columnGap</code></li>
+<li>#1518 Fix spacing of the delete button in notification element</li>
+<li>#1569 Fix missing use of <code>$pagination-color</code> variable</li>
+</ul>
+<h2 id="0-6-1">0.6.1</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>🎉 <a href="https://bulma.io/documentation/elements/button/#list-of-buttons">List of buttons</a></li>
+<li>🎉 #1235 Support for five column grid: <code>.is-one-fifth, .is-two-fifths, .is-three-fifths, .is-four-fifths</code></li>
+<li>🎉 #1287 New <code>.is-invisible</code> helper</li>
+<li>🎉 #1255 New <code>.is-expanded</code> modifier for <code>navbar-item</code></li>
+<li>🎉 #1384 New <code>.is-centered</code> and <code>.is-right</code> modifiers for <code>tags</code></li>
+<li>🎉 #1383 New <code>.is-empty</code> modifier for <code>file</code></li>
+<li>🎉 #1380 Allow <code>.is-selected</code> class on <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code> tags</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#987 Improve <code>tag &gt; icon</code> spacing</li>
+<li>Improve <code>hamburger</code> alignment</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>#1358 Fix indentation bug for .is-one-fifth</li>
+<li>#1356 SASS 3.5+ variable parsing compatibility allows only #{}</li>
+<li>#1342 Remove black line from progress bar in IE</li>
+<li>#1334 Fix progress bar colors in IE</li>
+<li>#1313 Fix Table <code>is-selected</code> and <code>is-hoverable</code> styling issue</li>
+<li>#963 Fix Delete Button Bug in iOS Safari</li>
+</ul>
+<h2 id="0-6-0">0.6.0</h2>
+<h3 id="breaking-changes">Breaking changes</h3>
+<ul>
+<li>The new <code>$link</code> color is part of the <code>$colors</code> map. As a result, <code>.button.is-link</code> is a colored button now. Use <code>.button.is-text</code> if you want the underlined button.</li>
+<li>The deprecated <code>variables.sass</code> file has been removed.</li>
+<li>The deprecated <code>nav.sass</code> file has been removed.</li>
+</ul>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#1236 <code>.table</code> hover effect is opt-in, by using the <code>.is-hoverable</code> modifier class</li>
+<li>#1254 <code>.dropdown</code> now supports <code>.is-up</code> modifier</li>
+</ul>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>#1257 Include placeholder mixin in <code>=input</code></li>
+</ul>
+<p>The <code>$link</code> color is used instead of <code>$primary</code> in the following components:</p>
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Old value</th>
+    <th>New value</th>
+  </tr>
+  <tr>
+    <td><code>$dropdown-item-active-color</code></td>
+    <td><code>$primary-invert</code></td>
+    <td><code>$link-invert</code></td>
+  </tr>
+  <tr>
+    <td><code>$dropdown-item-active-background-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-tab-hover-border-bottom-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-tab-active-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-tab-active-border-bottom-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$navbar-dropdown-item-active-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-link-active-border-bottom-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-link-active-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-toggle-link-active-background-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-toggle-link-active-border-color</code></td>
+    <td><code>$primary</code></td>
+    <td><code>$link</code></td>
+  </tr>
+  <tr>
+    <td><code>$tabs-toggle-link-active-color</code></td>
+    <td><code>$primary-invert</code></td>
+    <td><code>$link-invert</code></td>
+  </tr>
+</table>
+
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>#708 Import variables in mixins</li>
+</ul>
+<h2 id="0-5-3">0.5.3</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#1101 <code>.card-header-title</code> can be centered with <code>.is-centered</code></li>
+<li>#1189 <code>.input</code> readonly and <code>.is-static</code></li>
+<li>#1189 <code>.textarea</code> readonly</li>
+</ul>
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>#1177 Fix <code>.message .tag</code> combination</li>
+<li>#1167 Fix <code>pre code</code></li>
+<li>#1207 Fix <code>.breadcrumb</code> alignment</li>
+</ul>
+<h2 id="0-5-2">0.5.2</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>#842 <code>navbar</code> color modifiers</li>
+<li>#331 Support for third party icons</li>
+<li>Added <code>$button-focus-box-shadow-size</code> and <code>$button-focus-box-shadow-color</code> for customization</li>
+<li>Added <code>$input-focus-box-shadow-size</code> and <code>$input-focus-box-shadow-color</code> for customization</li>
+<li>Navbar tabs</li>
+</ul>
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>#1168 Undefined variable: <code>$navbar-item</code></li>
+<li>#930 Remove <code>vertical-align: top</code> for icons</li>
+<li>#735 Font awesome custom <code>font-size</code></li>
+<li>#395 Font awesome stacked icons</li>
+<li>#1152 Level-items not centered horizontally on mobile</li>
+<li>#1147 Add <code>text-size-adjust: 100%</code> to <code>html</code></li>
+<li>#1106 <code>pagination</code> docs</li>
+<li>#1063 <code>$family-primary</code> customization</li>
+</ul>
+<h2 id="0-5-1">0.5.1</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>🎉 #280 <a href="https://bulma.io/documentation/form/file/">File upload element</a></li>
+<li><code>$container-offset</code> variable to determine the <code>.container</code> breakpoints</li>
+<li>#1001 Text case helpers</li>
+</ul>
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>#1030 Add <code>!important</code> to non responsive display helpers</li>
+<li>#1020 Customizing <code>.navbar-item img</code> max height</li>
+<li>#998 <code>.navbar-dropdown</code> with <strong>right</strong> alignment</li>
+<li>#877 <code>.pagination</code> isn&#39;t using <code>$pagination-background</code></li>
+<li>#989 <code>navbar-brand</code> overflowing on mobile</li>
+<li>#975 Variable <code>$table-head-color</code> isn&#39;t used</li>
+<li>#964 Tabs sass file throwing error with <code>!important</code></li>
+<li>#949 <code>.is-size-7</code> helper is missing</li>
+</ul>
+<h2 id="0-5-0">0.5.0</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>🎉 <a href="https://bulma.io/documentation/elements/tag/#list-of-tags">List of tags</a></li>
+<li>New <strong>variable naming system</strong>: <code>component</code>-<code>subcomponent</code>-<code>state</code>-<code>property</code></li>
+<li>Improved <strong>customization</strong> thanks to new set of variables</li>
+<li>#934 New <code>.is-shadowless</code> helper</li>
+</ul>
+<p>Variable name changes (mostly appending <code>-color</code>):</p>
+<table>
+<tr><th>From</th><th>To</th></tr>
+<tr><td><code>$card</code></td><td><code>$card-color</code></td></tr>
+<tr><td><code>$card-background</code></td><td><code>$card-background-color</code></td></tr>
+<tr><td><code>$card-header</code></td><td><code>$card-header-color</code></td></tr>
+<tr><td><code>$dropdown-item</code></td><td><code>$dropdown-item-color</code></td></tr>
+<tr><td><code>$dropdown-content-background</code></td><td><code>$dropdown-content-background-color</code></td></tr>
+<tr><td><code>$dropdown-item-hover-background</code></td><td><code>$dropdown-item-hover-background-color</code></td></tr>
+<tr><td><code>$dropdown-item-hover</code></td><td><code>$dropdown-item-hover-color</code></td></tr>
+<tr><td><code>$dropdown-item-active-background</code></td><td><code>$dropdown-item-active-background-color</code></td></tr>
+<tr><td><code>$dropdown-item-active</code></td><td><code>$dropdown-item-active-color</code></td></tr>
+<tr><td><code>$dropdown-divider-background</code></td><td><code>$dropdown-divider-background-color</code></td></tr>
+<tr><td><code>$menu-item</code></td><td><code>$menu-item-color</code></td></tr>
+<tr><td><code>$menu-item-hover</code></td><td><code>$menu-item-hover-color</code></td></tr>
+<tr><td><code>$menu-item-hover-background</code></td><td><code>$menu-item-hover-background-color</code></td></tr>
+<tr><td><code>$menu-item-active</code></td><td><code>$menu-item-active-color</code></td></tr>
+<tr><td><code>$menu-item-active-background</code></td><td><code>$menu-item-active-background-color</code></td></tr>
+<tr><td><code>$menu-label</code></td><td><code>$menu-label-color</code></td></tr>
+<tr><td><code>$message-background</code></td><td><code>$message-background-color</code></td></tr>
+<tr><td><code>$message-header-background</code></td><td><code>$message-header-background-color</code></td></tr>
+<tr><td><code>$navbar-background</code></td><td><code>$navbar-background-color</code></td></tr>
+<tr><td><code>$navbar-item</code></td><td><code>$navbar-item-color</code></td></tr>
+<tr><td><code>$navbar-item-hover</code></td><td><code>$navbar-item-hover-color</code></td></tr>
+<tr><td><code>$navbar-item-hover-background</code></td><td><code>$navbar-item-hover-background-color</code></td></tr>
+<tr><td><code>$navbar-item-active</code></td><td><code>$navbar-item-active-color</code></td></tr>
+<tr><td><code>$navbar-item-active-background</code></td><td><code>$navbar-item-active-background-color</code></td></tr>
+<tr><td><code>$navbar-tab-hover-background</code></td><td><code>$navbar-tab-hover-background-color</code></td></tr>
+<tr><td><code>$navbar-tab-hover-border-bottom</code></td><td><code>$navbar-tab-hover-border-bottom-color</code></td></tr>
+<tr><td><code>$navbar-tab-active</code></td><td><code>$navbar-tab-active-color</code></td></tr>
+<tr><td><code>$navbar-tab-active-background</code></td><td><code>$navbar-tab-active-background-color</code></td></tr>
+<tr><td><code>$navbar-divider-background</code></td><td><code>$navbar-divider-background-color</code></td></tr>
+<tr><td><code>$navbar-dropdown-item-hover</code></td><td><code>$navbar-dropdown-item-hover-color</code></td></tr>
+<tr><td><code>$navbar-dropdown-item-hover-background</code></td><td><code>$navbar-dropdown-item-hover-background-color</code></td></tr>
+<tr><td><code>$navbar-dropdown-item-active</code></td><td><code>$navbar-dropdown-item-active-color</code></td></tr>
+<tr><td><code>$navbar-dropdown-item-active-background</code></td><td><code>$navbar-dropdown-item-active-background-color</code></td></tr>
+<tr><td><code>$pagination</code></td><td><code>$pagination-color</code></td></tr>
+<tr><td><code>$pagination-hover</code></td><td><code>$pagination-hover-color</code></td></tr>
+<tr><td><code>$pagination-hover-border</code></td><td><code>$pagination-hover-border-color</code></td></tr>
+<tr><td><code>$pagination-focus</code></td><td><code>$pagination-focus-color</code></td></tr>
+<tr><td><code>$pagination-focus-border</code></td><td><code>$pagination-focus-border-color</code></td></tr>
+<tr><td><code>$pagination-active</code></td><td><code>$pagination-active-color</code></td></tr>
+<tr><td><code>$pagination-active-border</code></td><td><code>$pagination-active-border-color</code></td></tr>
+<tr><td><code>$pagination-disabled</code></td><td><code>$pagination-disabled-color</code></td></tr>
+<tr><td><code>$pagination-disabled-background</code></td><td><code>$pagination-disabled-background-color</code></td></tr>
+<tr><td><code>$pagination-disabled-border</code></td><td><code>$pagination-disabled-border-color</code></td></tr>
+<tr><td><code>$pagination-current</code></td><td><code>$pagination-current-color</code></td></tr>
+<tr><td><code>$pagination-current-background</code></td><td><code>$pagination-current-background-color</code></td></tr>
+<tr><td><code>$pagination-current-border</code></td><td><code>$pagination-current-border-color</code></td></tr>
+<tr><td><code>$pagination-ellipsis</code></td><td><code>$pagination-ellipsis-color</code></td></tr>
+<tr><td><code>$box</code></td><td><code>$box-color</code></td></tr>
+<tr><td><code>$box-background</code></td><td><code>$box-background-color</code></td></tr>
+<tr><td><code>$button</code></td><td><code>$button-color</code></td></tr>
+<tr><td><code>$button-background</code></td><td><code>$button-background-color</code></td></tr>
+<tr><td><code>$button-border</code></td><td><code>$button-border-color</code></td></tr>
+<tr><td><code>$button-link</code></td><td><code>$button-link-color</code></td></tr>
+<tr><td><code>$button-link-hover-background</code></td><td><code>$button-link-hover-background-color</code></td></tr>
+<tr><td><code>$button-link-hover</code></td><td><code>$button-link-hover-color</code></td></tr>
+<tr><td><code>$button-disabled-background</code></td><td><code>$button-disabled-background-color</code></td></tr>
+<tr><td><code>$button-disabled-border</code></td><td><code>$button-disabled-border-color</code></td></tr>
+<tr><td><code>$button-static</code></td><td><code>$button-static-color</code></td></tr>
+<tr><td><code>$button-static-background</code></td><td><code>$button-static-background-color</code></td></tr>
+<tr><td><code>$button-static-border</code></td><td><code>$button-static-border-color</code></td></tr>
+<tr><td><code>$input</code></td><td><code>$input-color</code></td></tr>
+<tr><td><code>$input-background</code></td><td><code>$input-background-color</code></td></tr>
+<tr><td><code>$input-border</code></td><td><code>$input-border-color</code></td></tr>
+<tr><td><code>$input-hover</code></td><td><code>$input-hover-color</code></td></tr>
+<tr><td><code>$input-hover-border</code></td><td><code>$input-hover-border-color</code></td></tr>
+<tr><td><code>$input-focus</code></td><td><code>$input-focus-color</code></td></tr>
+<tr><td><code>$input-focus-border</code></td><td><code>$input-focus-border-color</code></td></tr>
+<tr><td><code>$input-disabled</code></td><td><code>$input-disabled-color</code></td></tr>
+<tr><td><code>$input-disabled-background</code></td><td><code>$input-disabled-background-color</code></td></tr>
+<tr><td><code>$input-disabled-border</code></td><td><code>$input-disabled-border-color</code></td></tr>
+<tr><td><code>$input-icon</code></td><td><code>$input-icon-color</code></td></tr>
+<tr><td><code>$input-icon-active</code></td><td><code>$input-icon-active-color</code></td></tr>
+<tr><td><code>$title</code></td><td><code>$title-color</code></td></tr>
+<tr><td><code>$subtitle</code></td><td><code>$subtitle-color</code></td></tr>
+<tr><td><code>$card-footer-border</code></td><td><code>$card-footer-border-top</code></td></tr>
+<tr><td><code>$menu-list-border</code></td><td><code>$menu-list-border-left</code></td></tr>
+<tr><td><code>$navbar-tab-hover-border</code></td><td><code>$navbar-tab-hover-border-bottom-color</code></td></tr>
+<tr><td><code>$navbar-tab-active-border</code></td><td><code>$navbar-tab-active-border-bottom</code></td></tr>
+<tr><td><code>$table-border</code></td><td><code>$table-cell-border</code></td></tr>
+<tr><td><code>$table-row-even-background</code></td><td><code>$table-striped-row-even-background-color</code></td></tr>
+<tr><td><code>$table-row-even-hover-background</code></td><td><code>$table-striped-row-even-hover-background-color</code></td></tr>
+</table>
+
+<h3 id="improved-documentation">Improved documentation</h3>
+<ul>
+<li><a href="https://bulma.io/documentation/overview/start/#starter-template">Starter template</a></li>
+<li><a href="https://bulma.io/documentation/overview/colors/">Colors page</a></li>
+<li><a href="https://bulma.io/documentation/modifiers/typography-helpers/">Typography helpers</a></li>
+<li><strong>Meta</strong> information for all elements and components</li>
+<li><strong>Variables</strong> information for most elements and components</li>
+</ul>
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>#909 <code>.dropdown</code> wrapping</li>
+<li>#938 <code>.is-fullwidth</code> removed from docs</li>
+<li>#900 Variable <code>.navbar-item</code> for hover+active background/color</li>
+<li>#902 <code>.navbar-item</code> color overrides</li>
+</ul>
+<h2 id="0-4-4">0.4.4</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>New <a href="https://bulma.io/documentation/components/dropdown/">dropdown button</a>!</li>
+<li>The breakpoints and <code>.container</code> <strong>gap</strong> can be customized with the new <code>$gap</code> variable</li>
+<li>The <code>.container</code> has 2 new modifiers: <code>.is-widescreen</code> and <code>.is-fullhd</code></li>
+</ul>
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>Fix #26 <code>.textarea</code> element will honors <code>[rows]</code> attribute</li>
+<li>Fix #887 <code>body</code> scrollbar</li>
+<li>Fix #715 <code>.help</code> class behavior in horizontal form <code>is-grouped</code> field</li>
+<li>Fix #842 Adding modifiers in <code>navbar</code></li>
+<li>Fix #841 <code>.container</code> as direct child of <code>.navbar</code> moves <code>.navbar-menu</code> below <code>.navbar-brand</code></li>
+<li>Fix #861 Box in hero as text and background white</li>
+<li>Fix #852 charset and version number</li>
+<li>Fix #856 JavaScript <code>.nav-burger</code> example</li>
+<li>Fix #821 Notification strong color</li>
+</ul>
+<h2 id="0-4-3">0.4.3</h2>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>New navbar with dropdown support</li>
+<li>Add new feature: Breadcrumb component (#632) @vinialbano</li>
+<li>Add Bloomer to README.md (#787) @AlgusDark</li>
+<li>Add responsive is-*-touch tags for .column sizes (#780) @tom-rb</li>
+<li>Adding &#39;is-hidden&#39; to helpers in docs (#798) @aheuermann</li>
+<li>Add figure/figcaption as content element (#807) @werthen</li>
+<li>Add <sup> and <sub> support to content (#808) @werthen</li>
+<li>Add re-bulma and react-bulma (#809) @kulakowka</li>
+<li>Add is-halfheight to hero (#783) @felipeas</li>
+<li>Added a related project with Golang backend (#784) @Caiyeon</li>
+</ul>
+<h3 id="issues-closed">Issues closed</h3>
+<ul>
+<li>Fix #827 Breadcrumb and Navbar in docs</li>
+<li>Fix #824 Code examples broken because of <code>text-align: center</code></li>
+<li>Fix #820 Loading spinner resizes with controls</li>
+<li>Fix #819 Remove <code>height: auto</code> from media elements</li>
+<li>Fix #790 Documentation typo</li>
+<li>Fix #814 Make use of +fullhd mixin for columns @Saboteur777</li>
+<li>Fix #781 Add min/max height/width to delete class size modifiers @ZackWard</li>
+<li>Fix #391 Section docs update</li>
+</ul>
+<h2 id="0-4-2">0.4.2</h2>
+<ul>
+<li>Fix #728 selected row on striped table</li>
+<li>Fix #747 remove flex-shrink for is-expanded</li>
+<li>Fix #702 add icons support for select dropdown</li>
+<li>Fix #712 delete button as flexbox item</li>
+<li>Fix #759 static button</li>
+</ul>
+<h2 id="0-4-1">0.4.1</h2>
+<ul>
+<li>Fix #568 max-width container</li>
+<li>Fix #589 notification delete</li>
+<li>Fix #272 nav-right without nav-menu</li>
+<li>Fix #616 hero and notification buttons</li>
+<li>Fix #607 has-addons z-index</li>
+<li>Feature #586 select color modifiers</li>
+<li>Fix #537 -ms-expand</li>
+<li>Fix #578 better <code>+center</code> mixin</li>
+<li>Fix #565 <code>dl</code> styles</li>
+<li>Fix #389 <code>pre</code> <code>margin-bottom</code></li>
+<li>Fix #484 icon alignment</li>
+<li>Fix #506 bold nav menu</li>
+<li>Fix #581 nav container</li>
+<li>Fix #512 nav grouped buttons</li>
+<li>Fix #605 container example</li>
+<li>Fix #458 select expanded</li>
+<li>Fix #403 separate animations</li>
+<li>Fix #637 customize Bulma</li>
+<li>Fix #584 loading select</li>
+<li>Fix #571 control height</li>
+<li>Fix #634 is-grouped control</li>
+<li>Fix #676 checkbox/radio wrapping</li>
+<li>Feature #479 has-icons placement</li>
+<li>Fix #442 selected table row</li>
+<li>Fix #187 add customize page</li>
+<li>Fix #449 columns negative horizontal margin</li>
+<li>Fix #399 pagination wrapping</li>
+<li>Fix #227 color keys as strings</li>
+</ul>
+<h2 id="0-4-0">0.4.0</h2>
+<ul>
+<li><strong>Default font-size is 16px</strong></li>
+<li><strong>New <code>.field</code> element ; <code>.control</code> repurposed</strong></li>
+<li><strong>New <code>.pagination</code> sizes</strong></li>
+<li><p><strong>New <code>$fullhd</code> breakpoint (1344px)</strong></p>
+</li>
+<li><p>Remove monospace named fonts</p>
+</li>
+<li>Remove icon spacing logic</li>
+<li>Split icon container dimensions and icon size</li>
+<li>Fix delete button by using pixels instead of (r)em</li>
+<li>Fix level on mobile</li>
+<li><p>Add new <code>.is-spaced</code> modifier for titles and subtitles</p>
+</li>
+<li><p>Fix #487</p>
+</li>
+<li>Fix #489</li>
+<li>Fix #502</li>
+<li>Fix #514</li>
+<li>Fix #524</li>
+<li>Fix #536</li>
+</ul>
+<h2 id="0-3-2">0.3.2</h2>
+<ul>
+<li>Fix #478</li>
+</ul>
+<h2 id="0-3-1">0.3.1</h2>
+<ul>
+<li>Fix #441</li>
+<li>Fix #443</li>
+</ul>
+<h2 id="0-3-0">0.3.0</h2>
+<ul>
+<li>Use <code>rem</code> and <code>em</code> (!)</li>
+<li>Fix Font Awesome icons in buttons (!)</li>
+<li>Fix message colors (!)</li>
+<li><p>Use <code>{% capture %}</code> to ensure same display as code snippet (!)</p>
+</li>
+<li><p>Move variables to their own file</p>
+</li>
+<li>Remove small tag</li>
+<li>Add <code>:focus</code> state</li>
+<li>Fix table</li>
+<li>Remove table <code>.is-icon</code> and <code>.is-link</code></li>
+<li>Add <code>.content</code> table</li>
+<li>Fix inputs with icons</li>
+<li>Input icons require the <code>.icon</code> container</li>
+<li>Deprecate <code>.media-number</code></li>
+<li>Fix <code>.level-item</code> height</li>
+<li>Fix <code>.menu</code> spacing</li>
+<li>Deprecate <code>.menu-nav</code></li>
+<li>Add invert outlined buttons</li>
+<li>Fix <code>.nav</code></li>
+<li>Fix <code>.pagination</code></li>
+<li>Fix <code>.tabs</code></li>
+<li>Fix <code>.panel</code></li>
+<li>Fix <code>.delete</code></li>
+<li>Add mixins documentation</li>
+<li>Add functions documentation</li>
+</ul>
+<h2 id="0-2-2">0.2.2</h2>
+<ul>
+<li>Fix: remove multiple imports</li>
+</ul>
+<h2 id="0-2-1">0.2.1</h2>
+<ul>
+<li>Fix: container flex</li>
+<li>Fix: nav-item flex</li>
+<li>Fix: media-number flex</li>
+<li>Fix: new brand colors</li>
+</ul>
+<h2 id="0-2-0">0.2.0</h2>
+<ul>
+<li>Added: new branding</li>
+<li>Added: modularity</li>
+<li>Added: grid folder</li>
+<li>Added: .github folder</li>
+</ul>
+<h2 id="0-1-1">0.1.1</h2>
+<ul>
+<li>Remove <code>flex: 1</code> shorthand</li>
+</ul>
+<h2 id="0-1-0">0.1.0</h2>
+<ul>
+<li>Fix #227</li>
+<li>Fix #232</li>
+<li>Fix #242</li>
+<li>Fix #243</li>
+<li>Fix #228</li>
+<li>Fix #245</li>
+<li>Fix #246</li>
+</ul>
+<h2 id="0-0-28">0.0.28</h2>
+<ul>
+<li>BREAKING: <code>.control.is-grouped</code> now uses <code>.control</code> elements as direct children</li>
+<li>Fix #220</li>
+<li>Fix #214</li>
+<li>Fix #210</li>
+<li>Fix #206</li>
+<li>Fix #122</li>
+</ul>
+<h2 id="0-0-27">0.0.27</h2>
+<ul>
+<li>Fix: #217</li>
+<li>Fix: #213</li>
+<li>Fix: #209</li>
+<li>Fix: #205</li>
+<li>Fix: #204</li>
+<li>Fix: #81</li>
+</ul>
+<h2 id="0-0-26">0.0.26</h2>
+<ul>
+<li>Added: <code>.modal-card</code></li>
+<li>Added: display responsive utilities</li>
+<li>Added: <code>.nav-center</code></li>
+<li>Added: <code>.tabs ul</code> left center right</li>
+<li>Changed: <code>.navbar</code> renamed to <code>.level</code></li>
+<li>Changed: <code>.header</code> renamed to <code>.nav</code></li>
+<li>Deprecated: <code>.header</code></li>
+<li>Deprecated: <code>.navbar</code></li>
+<li>Fixed: <code>.hero</code> layout</li>
+</ul>
+<h2 id="0-0-25">0.0.25</h2>
+<ul>
+<li>Added: <code>utilities/controls.sass</code> and <code>elements/form.sass</code></li>
+<li>Added: new responsive classes</li>
+<li>Added: white/black and light/dark colors</li>
+<li>Changed: <code>.tabs</code> need <code>.icon</code> now</li>
+<li>Changed: cdnjs link doesn&#39;t include version</li>
+</ul>
+<h2 id="0-0-24">0.0.24</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>is-mobile</code> for the navbar</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>removed border between sections. Use <code>&lt;hr class=&quot;is-marginless&quot;&gt;</code> now</li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li>restructured files</li>
+<li>added back <code>inline-flex</code> for controls and tags</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>test tiles</li>
+</ul>
+<h2 id="0-0-23">0.0.23</h2>
+<h3 id="breaking">BREAKING</h3>
+<ul>
+<li><code>bulma</code> folder renamed to <code>sass</code> to avoid the redundant <code>bulma/bulma</code> path</li>
+<li><code>variables.sass</code> moved to <code>/utilities</code></li>
+<li>almost everything is singular now</li>
+<li><strong>elements</strong> only have one class</li>
+<li><strong>components</strong> have at least one sub-class</li>
+<li><code>.content</code> moved to elements</li>
+<li><code>.table</code> moved to elements</li>
+<li><code>.message</code> moved to components</li>
+<li><code>.table-icon</code>, <code>.table-link</code>, <code>.table-narrow</code> are now called <code>.is-icon</code>, <code>.is-link</code>, <code>.is-narrow</code></li>
+</ul>
+<h3 id="added">Added</h3>
+<ul>
+<li>all variables are now <code>!default</code> so you can set your custom variables before importing Bulma</li>
+</ul>
+<h2 id="0-0-22">0.0.22</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>links in hero subtitle</li>
+</ul>
+<h2 id="0-0-21">0.0.21</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>.column.is-narrow</code> to make a column <code>flex: none</code></li>
+</ul>
+<h2 id="0-0-20">0.0.20</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>.has-icon</code> support for different <code>.input</code> sizes</li>
+</ul>
+<h2 id="0-0-19">0.0.19</h2>
+<h3 id="new-">NEW!!!</h3>
+<ul>
+<li><code>.tile</code></li>
+</ul>
+<h3 id="breaking">BREAKING</h3>
+<ul>
+<li><code>.is-third</code> renamed to <code>.is-one-third</code></li>
+<li><code>.is-quarter</code> renamed to <code>.is-one-quarter</code></li>
+</ul>
+<h3 id="added">Added</h3>
+<ul>
+<li><code>.is-two-thirds</code></li>
+<li><code>.is-three-quarters</code></li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><code>.delete</code> in <code>.tag</code> has no red</li>
+</ul>
+<h2 id="0-0-18">0.0.18</h2>
+<h3 id="breaking">BREAKING</h3>
+<ul>
+<li><code>.is-text-*</code> renamed to <code>.has-text-*</code></li>
+<li>removed <code>.is-fullwidth</code> helper</li>
+</ul>
+<h3 id="added">Added</h3>
+<ul>
+<li><strong>small tag</strong>: <code>.tag.is-small</code></li>
+<li>12th column classes</li>
+<li><code>*-full</code> column classes</li>
+<li><code>$family-code</code></li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>disabled input with element</li>
+<li><code>.table</code> last row with <code>th</code></li>
+<li><code>.card</code> color in <code>.hero</code></li>
+<li><code>.columns.is-gapless</code></li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>removed <code>box-shadow</code> from <code>.tag</code></li>
+<li>custom checkboxes and radio buttons</li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li><code>.tag</code> uses <code>display: inline-flex</code> now</li>
+</ul>
+<h2 id="0-0-17">0.0.17</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><strong>pagination</strong>: <code>.pagination</code></li>
+<li><strong>horizontal forms</strong>: <code>.control.is-horizontal</code></li>
+<li><strong>help</strong> text for form controls: <code>.help</code></li>
+<li><strong>progress bars</strong>: <code>.progress</code></li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li><code>.button</code> uses <code>display: inline-flex</code> now</li>
+<li><code>.button</code> needs an <code>.icon</code> now</li>
+<li><code>.control.is-grouped</code> renamed to <code>.control.has-addons</code></li>
+<li><code>.control.is-inline</code> renamed to <code>.control.is-grouped</code></li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li><strong>helpers</strong> <code>.is-inline</code> and <code>.is-block</code></li>
+</ul>
+
+      </body>
+    </html>
