@@ -10,11 +10,15 @@
 
 body {
     color: #323232;
-    background-color: #4b5f8f;
+    background-color: #5d5d5d;
+}
+
+.title {
+    color: #fff;
 }
 
 $main-outer: 15px;
-$image-width: 80%;
+$image-width: 95%;
 $element-space: 2%;
 $top-image-width: 95%;
 
@@ -46,13 +50,15 @@ main {
 .card {
     // width: 50%;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5%;
+    background-size: contain;
+    background-position: center;
+    padding: 10% 12% 15%;
     font-size: 3vw;
     border: 0;
     box-shadow: none;
     color: #323232;
     border-radius: 0;
+    background-color: transparent;
 
     .is-cover {
         width: $image-width;
@@ -102,11 +108,15 @@ main {
     background-color: rgba(#323232,0.6);
     text-align: center;
     margin: 0 auto;
-    
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    text-overflow: ellipsis;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
 }
 .contestants-name {
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: $element-space;
     max-height: 1.5em;
     display: -webkit-box;
@@ -126,9 +136,16 @@ main {
 }
 
 .top-card {
-    transition: 0.3s all ease-in-out;
+    .card {
+        transition: 0.3s all ease-in-out;
+        padding: 25% 8% 15%;
+        background-position: top;
+        &:hover {
+            transform: translate(-2%,-2%);
+        }
+    }
     figure {
-        margin-top: 12%;
+        // margin-top: 12%;
         margin-bottom: 0;
     }
     .is-cover {
@@ -139,20 +156,30 @@ main {
         margin-bottom: 2%;
     }
     .contestants-name {
-        font-size: 1.3em;
-        min-height: 1.3em;
+        font-size: 1.5em;
+        min-height: 1.5em;
         margin-bottom: 0;
     }
     .votes {
         margin-bottom: 0;
         text-align: right;
         strong {
-            font-size: 1.6em;
+            font-size: 2em;
         }
     }
-    &:hover {
-        transform: translate(-2%,-2%);
-
+    
+    .is-4 {
+        .card {
+            padding: 20% 12% 13%;
+        }
+        .votes {
+            strong {
+                font-size: 1.2em;
+            }
+        }
+        .contestants-name {
+            font-size: 1.2em;
+        }
     }
 }
 
@@ -179,6 +206,19 @@ main {
         .votes {
             strong {
                 font-size: 2em;
+            }
+        }
+        .is-4 {
+            .card {
+                padding: 15% 15% 20%;
+            }
+            .votes {
+                strong {
+                    font-size: 2em;
+                }
+            }
+            .contestants-name {
+                font-size: 1.2em;
             }
         }
     }

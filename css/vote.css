@@ -8134,7 +8134,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 body {
   color: #323232;
-  background-color: #4b5f8f; }
+  background-color: #5d5d5d; }
+
+.title {
+  color: #fff; }
 
 main {
   padding-left: 15px;
@@ -8157,16 +8160,18 @@ main {
 
 .card {
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 5%;
+  background-size: contain;
+  background-position: center;
+  padding: 10% 12% 15%;
   font-size: 3vw;
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #323232;
-  border-radius: 0; }
+  border-radius: 0;
+  background-color: transparent; }
   .card .is-cover {
-    width: 80%;
+    width: 95%;
     display: block;
     margin: 0 auto;
     text-align: center; }
@@ -8194,16 +8199,22 @@ main {
 
 .contestants-number {
   display: block;
-  width: 80%;
+  width: 95%;
   color: #fff;
   padding: 0.2%;
   background-color: rgba(50, 50, 50, 0.6);
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
 
 .contestants-name {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 2%;
   max-height: 1.5em;
   display: -webkit-box;
@@ -8220,31 +8231,46 @@ main {
     color: #7B61FF;
     font-weight: bold; }
 
-.top-card {
+.top-card .card {
   -webkit-transition: 0.3s all ease-in-out;
   -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out; }
-  .top-card figure {
-    margin-top: 12%;
-    margin-bottom: 0; }
-  .top-card .is-cover {
-    width: 95%; }
-  .top-card .contestants-number {
-    width: 95%;
-    margin-bottom: 2%; }
-  .top-card .contestants-name {
-    font-size: 1.3em;
-    min-height: 1.3em;
-    margin-bottom: 0; }
-  .top-card .votes {
-    margin-bottom: 0;
-    text-align: right; }
-    .top-card .votes strong {
-      font-size: 1.6em; }
-  .top-card:hover {
+  transition: 0.3s all ease-in-out;
+  padding: 25% 8% 15%;
+  background-position: top; }
+  .top-card .card:hover {
     -webkit-transform: translate(-2%, -2%);
     -ms-transform: translate(-2%, -2%);
     transform: translate(-2%, -2%); }
+
+.top-card figure {
+  margin-bottom: 0; }
+
+.top-card .is-cover {
+  width: 95%; }
+
+.top-card .contestants-number {
+  width: 95%;
+  margin-bottom: 2%; }
+
+.top-card .contestants-name {
+  font-size: 1.5em;
+  min-height: 1.5em;
+  margin-bottom: 0; }
+
+.top-card .votes {
+  margin-bottom: 0;
+  text-align: right; }
+  .top-card .votes strong {
+    font-size: 2em; }
+
+.top-card .is-4 .card {
+  padding: 20% 12% 13%; }
+
+.top-card .is-4 .votes strong {
+  font-size: 1.2em; }
+
+.top-card .is-4 .contestants-name {
+  font-size: 1.2em; }
 
 @media screen and (min-width: 769px), print {
   .column {
@@ -8260,6 +8286,12 @@ main {
     font-size: 1.6em; }
   .top-card .votes strong {
     font-size: 2em; }
+  .top-card .is-4 .card {
+    padding: 15% 15% 20%; }
+  .top-card .is-4 .votes strong {
+    font-size: 2em; }
+  .top-card .is-4 .contestants-name {
+    font-size: 1.2em; }
   .top-section2 {
     max-width: 700px;
     margin: 0 auto; } }
